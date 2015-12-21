@@ -17,8 +17,8 @@ let boxGap: CGFloat = 50
 
 class ViewController: UIViewController {
     
-    var scrollView = UIScrollView()
-    var containerView = UIView()
+    let scrollView = UIScrollView()
+    let containerView = UIView()
 
     
     override func viewDidLoad() {
@@ -33,8 +33,8 @@ class ViewController: UIViewController {
         使用外部视图进行布局
         Use views outside to locate subviews in scrollview
         */
-//        layoutWithContainer()
-        layoutWithAbsoluteView()
+        layoutWithContainer()
+//        layoutWithAbsoluteView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,12 +59,21 @@ extension ViewController {
         
         containerView.backgroundColor = scrollView.backgroundColor
         
+        /**
+        *  对scrollView添加约束
+        *  Add constraints to scrollView
+        */
         scrollView.snp_makeConstraints { (make) -> Void in
             make.centerY.equalTo(view.snp_centerY)
             make.left.right.equalTo(view)
             make.height.equalTo(topScrollHeight)
         }
         
+        /**
+        *  对containerView添加约束，接下来只要确定containerView的宽度即可
+        *  Add constraints to containerView, the only thing we will do
+        *  is to define the width of containerView
+        */
         containerView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(scrollView)
             make.height.equalTo(topScrollHeight)
@@ -76,7 +85,7 @@ extension ViewController {
             containerView.addSubview(box)
             
             box.snp_makeConstraints(closure: { (make) -> Void in
-                make.top.height.equalTo(containerView)
+                make.top.height.equalTo(containerView)  // 确定top和height之后，box在竖直方向上完全确定
                 make.width.equalTo(boxWidth)
                 if i == 0 {
                     make.left.equalTo(containerView).offset(boxGap / 2)
@@ -86,6 +95,9 @@ extension ViewController {
                 }
                 if i == 5 {
                     containerView.snp_makeConstraints(closure: { (make) -> Void in
+                        // 这一步是关键，它确定了container的宽度，也就确定了contentSize
+                        // This step is very important, it set the width of container, so the 
+                        // contentSize is available now
                         make.right.equalTo(box)
                     })
                 }
@@ -111,9 +123,12 @@ extension ViewController {
             box.backgroundColor = UIColor.redColor()
             scrollView.addSubview(box)
             
+            // box依赖于外部视图布局，不能依赖scrollView
+            // The position of box rely on self.view instead of scrollView
             box.snp_makeConstraints(closure: { (make) -> Void in
                 make.top.equalTo(0)
-                make.bottom.equalTo(view).offset(-(ScreenHeight - topScrollHeight) / 2)  // This bottom can be incorret when device is rotated
+                // This bottom can be incorret when device is rotated
+                make.bottom.equalTo(view).offset(-(ScreenHeight - topScrollHeight) / 2)
                 make.height.equalTo(topScrollHeight)
                 
                 make.width.equalTo(boxWidth)
@@ -125,6 +140,9 @@ extension ViewController {
                 }
                 
                 if i == 5 {
+                    // 这里设定最右侧的box，距离contentSize的右边界距离
+                    // The the distance from the box on the right side 
+                    // to the right side of contentSize
                     make.right.equalTo(scrollView)
                 }
             })
