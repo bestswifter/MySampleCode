@@ -10,3 +10,5 @@ I highly recommand you to use container instead of a view outsdie scrollview bec
 
 强烈推荐使用container，这种写法远比用外部视图安全、方便
 
+详细的教程请参考我的博客：[史上最简单的UIScrollView+Autolayout出坑指南](http://www.jianshu.com/p/f7f1ba67c3ca)
+
