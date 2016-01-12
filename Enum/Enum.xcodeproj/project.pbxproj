@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9BBAB5CF1C44A36A003D6A4B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBAB5CE1C44A36A003D6A4B /* main.swift */; };
 		9BCFBB7E1C44C89300F7ED4B /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFBB7D1C44C89300F7ED4B /* Tree.swift */; };
+		9BCFBB811C44CF4100F7ED4B /* OCEnum.h in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFBB801C44CF4100F7ED4B /* OCEnum.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,8 @@
 		9BBAB5CB1C44A36A003D6A4B /* Enum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Enum; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBAB5CE1C44A36A003D6A4B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9BCFBB7D1C44C89300F7ED4B /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		9BCFBB7F1C44CF4100F7ED4B /* Enum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Enum-Bridging-Header.h"; sourceTree = "<group>"; };
+		9BCFBB801C44CF4100F7ED4B /* OCEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCEnum.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				9BBAB5CE1C44A36A003D6A4B /* main.swift */,
+				9BCFBB801C44CF4100F7ED4B /* OCEnum.h */,
 				9BCFBB7D1C44C89300F7ED4B /* Tree.swift */,
+				9BCFBB7F1C44CF4100F7ED4B /* Enum-Bridging-Header.h */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BBAB5CF1C44A36A003D6A4B /* main.swift in Sources */,
+				9BCFBB811C44CF4100F7ED4B /* OCEnum.h in Sources */,
 				9BCFBB7E1C44C89300F7ED4B /* Tree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,14 +219,21 @@
 		9BBAB5D31C44A36A003D6A4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enum/Enum-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9BBAB5D41C44A36A003D6A4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enum/Enum-Bridging-Header.h";
 			};
 			name = Release;
 		};
