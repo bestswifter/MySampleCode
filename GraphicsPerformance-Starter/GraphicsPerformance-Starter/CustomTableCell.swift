@@ -14,16 +14,7 @@ class CustomTableCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        label.layer.shouldRasterize = true
-//        imgView.layer.shadowColor = UIColor.blackColor().CGColor
-//        imgView.layer.shadowOpacity = 1
-//        imgView.layer.shadowRadius = 2
-//        imgView.layer.shadowOffset = CGSizeMake(1, 1)
-//        // 不加下面这句，Core Animation 会计算阴影形状,这需要离屏渲染，touch上fps掉到30
-//        imgView.layer.shadowPath = UIBezierPath(rect: imgView.bounds).CGPath
-        
-        
-//        label.backgroundColor = UIColor.whiteColor() // 不加这一行就会有blended layer
+        label.layer.shouldRasterize = true
         
         self.contentView.addSubview(imgView)
         self.contentView.addSubview(label)
