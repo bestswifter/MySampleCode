@@ -14,6 +14,12 @@ class CustomTableCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        imgView.layer.shadowColor = UIColor.blackColor().CGColor
+        imgView.layer.shadowOpacity = 1
+        imgView.layer.shadowRadius = 2
+        imgView.layer.shadowOffset = CGSizeMake(1, 1)
+        
         label.layer.shouldRasterize = true
         
         self.contentView.addSubview(imgView)
