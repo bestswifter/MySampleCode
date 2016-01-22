@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTableCell: UITableViewCell {
     let imgView = UIImageView(frame: CGRectMake(10, 10, 180, 180))
-    let label = UILabel(frame: CGRectMake(250, 90, 100, 20))
+    let label = UILabel(frame: CGRectMake(220, 90, 150, 20))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
