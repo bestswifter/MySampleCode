@@ -17,9 +17,9 @@ static NSMutableArray *someObjects;
     NSLog(@"Load Class Parent");
 }
 
-//+ (void)initialize {
-//    NSLog(@"Initialize Parent, caller Class %@", [self class]);
-//}
++ (void)initialize {
+    NSLog(@"Initialize Parent, caller Class %@", [self class]);
+}
 
 /**
  *  下面这个才是正确的initialize方法的实现，需要判断是不是由自己这个类调用的。

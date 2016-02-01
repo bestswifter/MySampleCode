@@ -14,10 +14,13 @@
 + (void)load {
     NSLog(@"Load Class Child");
     
-    Other *normal = [[Other alloc] init];
-    NSLog(@"%@",normal);
+    /**
+     *  这时候Other类还没调用load方法，所以输出结果是Original Output
+     */
+    Other *other = [Other new];
+    [other originalFunc];
     
-    // 如果不先调用Normal的load，下面这行代码就无效，打印出null
+    // 如果不先调用other的load，下面这行代码就无效，打印出null
     [Other printName];
 }
 

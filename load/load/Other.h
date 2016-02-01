@@ -11,5 +11,6 @@
 @interface Other : NSObject
 
 + (void)printName;
+- (void)originalFunc;
 
 @end

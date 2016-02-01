@@ -11,6 +11,7 @@
 		9B8E43D31C5F6E78002ABEBC /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E43D21C5F6E78002ABEBC /* Parent.m */; };
 		9B8E43D61C5F6E7E002ABEBC /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E43D51C5F6E7E002ABEBC /* Child.m */; };
 		9B8E43DC1C5F94E2002ABEBC /* Other.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E43DA1C5F94E2002ABEBC /* Other.m */; };
+		9B8E43DF1C5FA5D5002ABEBC /* Child+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E43DE1C5FA5D5002ABEBC /* Child+load.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		9B8E43D51C5F6E7E002ABEBC /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
 		9B8E43DA1C5F94E2002ABEBC /* Other.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Other.m; sourceTree = "<group>"; };
 		9B8E43DB1C5F94E2002ABEBC /* Other.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Other.h; sourceTree = "<group>"; };
+		9B8E43DD1C5FA5D5002ABEBC /* Child+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Child+load.h"; sourceTree = "<group>"; };
+		9B8E43DE1C5FA5D5002ABEBC /* Child+load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Child+load.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +69,11 @@
 		9B8E43C91C5F6E40002ABEBC /* load */ = {
 			isa = PBXGroup;
 			children = (
-				9B8E43DA1C5F94E2002ABEBC /* Other.m */,
-				9B8E43DB1C5F94E2002ABEBC /* Other.h */,
 				9B8E43CA1C5F6E40002ABEBC /* main.m */,
+				9B8E43DD1C5FA5D5002ABEBC /* Child+load.h */,
+				9B8E43DE1C5FA5D5002ABEBC /* Child+load.m */,
+				9B8E43DB1C5F94E2002ABEBC /* Other.h */,
+				9B8E43DA1C5F94E2002ABEBC /* Other.m */,
 				9B8E43D11C5F6E78002ABEBC /* Parent.h */,
 				9B8E43D21C5F6E78002ABEBC /* Parent.m */,
 				9B8E43D41C5F6E7E002ABEBC /* Child.h */,
@@ -136,6 +141,7 @@
 				9B8E43CB1C5F6E40002ABEBC /* main.m in Sources */,
 				9B8E43D61C5F6E7E002ABEBC /* Child.m in Sources */,
 				9B8E43D31C5F6E78002ABEBC /* Parent.m in Sources */,
+				9B8E43DF1C5FA5D5002ABEBC /* Child+load.m in Sources */,
 				9B8E43DC1C5F94E2002ABEBC /* Other.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
