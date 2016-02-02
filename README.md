@@ -5,7 +5,7 @@
 不过都是些源码，下载速度非常快。我更建议您使用`git clone`，这样以后更新时只要`git pull`就可以了，避免了重复下载的麻烦。
 
 # 快速索引
-[简书]()、[bestswifter]()
+
 这些demo都是用来配合我的博客，你可以选择在简书或我的个人博客阅读文章，水平有限欢迎指正。
 
 * 你应该知道的Swift小tips：[简书](http://www.jianshu.com/p/a11c6060176c)
@@ -16,3 +16,4 @@
 * UIKit性能调优实战讲解：[简书](http://www.jianshu.com/p/619cf14640f3)、[bestswifter](http://bestswifter.com/uikitxing-neng-diao-you-shi-zhan-jiang-jie/)
 * Swift递归枚举与红黑树：[简书](http://www.jianshu.com/p/ad09e1f404b0)
 * 史上最简单的UIScrollView+Autolayout出坑指南：[简书](http://www.jianshu.com/p/f7f1ba67c3ca)、[bestswifter](http://bestswifter.com/uiscrollviewwithautolayout/)
+* 几个加速Swift开发的小tip：[简书]()

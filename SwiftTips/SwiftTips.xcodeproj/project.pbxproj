@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9BE365691C60CFCE00C61A55 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE365681C60CFCE00C61A55 /* main.swift */; };
-		9BE365741C60D07B00C61A55 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3656F1C60D07B00C61A55 /* Closure.swift */; };
 		9BE365751C60D07B00C61A55 /* PrivateSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE365701C60D07B00C61A55 /* PrivateSet.swift */; };
 		9BE365761C60D07B00C61A55 /* Semicolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE365711C60D07B00C61A55 /* Semicolon.swift */; };
 		9BE365771C60D07B00C61A55 /* Breakpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE365721C60D07B00C61A55 /* Breakpoint.swift */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		9BE365651C60CFCE00C61A55 /* SwiftTips */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftTips; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE365681C60CFCE00C61A55 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		9BE3656F1C60D07B00C61A55 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		9BE365701C60D07B00C61A55 /* PrivateSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateSet.swift; sourceTree = "<group>"; };
 		9BE365711C60D07B00C61A55 /* Semicolon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semicolon.swift; sourceTree = "<group>"; };
 		9BE365721C60D07B00C61A55 /* Breakpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breakpoint.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				9BE365681C60CFCE00C61A55 /* main.swift */,
-				9BE3656F1C60D07B00C61A55 /* Closure.swift */,
 				9BE365701C60D07B00C61A55 /* PrivateSet.swift */,
 				9BE365711C60D07B00C61A55 /* Semicolon.swift */,
 				9BE365721C60D07B00C61A55 /* Breakpoint.swift */,
@@ -137,7 +134,6 @@
 				9BE365691C60CFCE00C61A55 /* main.swift in Sources */,
 				9BE365781C60D07B00C61A55 /* ReuseIdentifier.swift in Sources */,
 				9BE365751C60D07B00C61A55 /* PrivateSet.swift in Sources */,
-				9BE365741C60D07B00C61A55 /* Closure.swift in Sources */,
 				9BE365771C60D07B00C61A55 /* Breakpoint.swift in Sources */,
 				9BE365761C60D07B00C61A55 /* Semicolon.swift in Sources */,
 			);
@@ -259,6 +255,7 @@
 				9BE3656E1C60CFCE00C61A55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,4 +11,13 @@ import Foundation
 func doSomething() {
     let error: AnyObject? = nil
     guard error == nil else { print("Error information"); return }
+    
+    /**
+    *  Old version
+    */
+    guard error == nil
+    else {
+        print("Error information")
+        return
+    }
 }
