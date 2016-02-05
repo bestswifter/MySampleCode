@@ -16,4 +16,4 @@
 * UIKit性能调优实战讲解：[简书](http://www.jianshu.com/p/619cf14640f3)、[bestswifter](http://bestswifter.com/uikitxing-neng-diao-you-shi-zhan-jiang-jie/)
 * Swift递归枚举与红黑树：[简书](http://www.jianshu.com/p/ad09e1f404b0)
 * 史上最简单的UIScrollView+Autolayout出坑指南：[简书](http://www.jianshu.com/p/f7f1ba67c3ca)、[bestswifter](http://bestswifter.com/uiscrollviewwithautolayout/)
-* 几个加速Swift开发的小tip：[简书]()
+* 几个加速Swift开发的小tip：[简书](http://www.jianshu.com/p/5ebd5e8ecf60)
