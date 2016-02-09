@@ -109,10 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				9B5075091C68D94400C89416 /* InteractivityFirstViewController.swift */,
+				9B50750B1C68D95600C89416 /* InteractivitySecondViewController.swift */,
 				9B50750D1C68EC1D00C89416 /* InteractivityTransitionDelegate.swift */,
 				9B50750F1C68EC8C00C89416 /* InteractivityTransitionAnimator.swift */,
 				9B5075111C68F08C00C89416 /* TransitionInteractionController.swift */,
-				9B50750B1C68D95600C89416 /* InteractivitySecondViewController.swift */,
 			);
 			name = Interactivity;
 			path = "CustomTransition-Swift/Interactivity";

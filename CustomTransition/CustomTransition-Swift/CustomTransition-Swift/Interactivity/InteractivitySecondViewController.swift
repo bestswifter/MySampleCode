@@ -9,6 +9,7 @@
 import UIKit
 
 class InteractivitySecondViewController: UIViewController {
+    lazy var interactiveTransitionRecognizer: UIScreenEdgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: Selector("interactiveTransitionRecognizerAction:"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,33 +29,40 @@ class InteractivitySecondViewController: UIViewController {
         button.frame.origin.y = view.frame.maxY - 100
         button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         button.setTitle("Dismiss", forState: .Normal)
-        button.addTarget(self, action: Selector("buttonDidClicked"), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: Selector("animationButtonDidClicked:"), forControlEvents: .TouchUpInside)
         view.addSubview(button)
         
         /// 添加滑动交互手势
-        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: Selector("interactiveTransitionRecognizerAction:"))
-        interactiveTransitionRecognizer.edges = .Right;
+        interactiveTransitionRecognizer.edges = .Left
         self.view.addGestureRecognizer(interactiveTransitionRecognizer)
-        
-        /// 设置动画代理
-        if let transitionDelegate = self.transitioningDelegate as? InteractivityTransitionDelegate {
-            transitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
 extension InteractivitySecondViewController {
-    func buttonDidClicked() {
+    func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .Began {
+            self.animationButtonDidClicked(sender)
+        }
+    }
+}
+
+extension InteractivitySecondViewController {
+    func animationButtonDidClicked(sender: AnyObject) {
         /**
         *  应该由FirstVC执行下面这行代码，为了保持demo简单，突出重点，这里的写法其实是不严格的，请见谅
         */
         if let transitionDelegate = self.transitioningDelegate as? InteractivityTransitionDelegate {
+            if sender.isKindOfClass(UIGestureRecognizer) {
+                transitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+            }
+            else {
+                transitionDelegate.gestureRecognizer = nil
+            }
             transitionDelegate.targetEdge = .Left
         }
         self.dismissViewControllerAnimated(true, completion: nil)

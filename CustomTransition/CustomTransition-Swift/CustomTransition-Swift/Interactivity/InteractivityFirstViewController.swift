@@ -11,6 +11,8 @@ import UIKit
 class InteractivityFirstViewController: UIViewController {
     lazy var interactivitySecondViewController: InteractivitySecondViewController = InteractivitySecondViewController()
     lazy var customTransitionDelegate: InteractivityTransitionDelegate = InteractivityTransitionDelegate()
+    lazy var interactiveTransitionRecognizer: UIScreenEdgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: Selector("interactiveTransitionRecognizerAction:"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = [224, 222, 255].color    // 设置背景颜色
@@ -32,19 +34,12 @@ class InteractivityFirstViewController: UIViewController {
         button.frame.origin.y = view.frame.maxY - 100
         button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         button.setTitle("演示动画", forState: .Normal)
-        button.addTarget(self, action: Selector("animationButtonDidClicked"), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: Selector("animationButtonDidClicked:"), forControlEvents: .TouchUpInside)
         view.addSubview(button)
         
         /// 添加滑动交互手势
-        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: Selector("interactiveTransitionRecognizerAction:"))
         interactiveTransitionRecognizer.edges = .Right;
         self.view.addGestureRecognizer(interactiveTransitionRecognizer)
-        
-        /// 设置动画代理
-        customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
-        interactivitySecondViewController.transitioningDelegate = customTransitionDelegate
-        interactivitySecondViewController.modalPresentationStyle = .FullScreen
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,14 +51,25 @@ class InteractivityFirstViewController: UIViewController {
 extension InteractivityFirstViewController {
     func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .Began {
-            
+            customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+            self.animationButtonDidClicked(sender)
         }
     }
 }
 
 extension InteractivityFirstViewController {
-    func animationButtonDidClicked() {
+    func animationButtonDidClicked(sender: AnyObject) {
+        /// 设置动画代理
+        if sender.isKindOfClass(UIGestureRecognizer) {
+            customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+        }
+        else {
+            customTransitionDelegate.gestureRecognizer = nil
+        }
         customTransitionDelegate.targetEdge = .Right
+        interactivitySecondViewController.transitioningDelegate = customTransitionDelegate
+        interactivitySecondViewController.modalPresentationStyle = .FullScreen
+        
         self.presentViewController(interactivitySecondViewController, animated: true, completion: nil)
     }
     
