@@ -23,13 +23,16 @@ class InteractivityTransitionDelegate: NSObject, UIViewControllerTransitioningDe
     /// 前两个函数和淡入淡出demo中的实现一致
     
     func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if gestureRecognizer != nil {
-            
+        if let gestureRecognizer = self.gestureRecognizer {
+            return TransitionInteractionController(gestureRecognizer: gestureRecognizer, edgeForDragging: targetEdge)
         }
         return nil
     }
     
     func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        if let gestureRecognizer = self.gestureRecognizer {
+            return TransitionInteractionController(gestureRecognizer: gestureRecognizer, edgeForDragging: targetEdge)
+        }
         return nil
     }
 }

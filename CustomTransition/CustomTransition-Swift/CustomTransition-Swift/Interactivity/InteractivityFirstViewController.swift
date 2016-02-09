@@ -40,6 +40,11 @@ class InteractivityFirstViewController: UIViewController {
         interactiveTransitionRecognizer.edges = .Right;
         self.view.addGestureRecognizer(interactiveTransitionRecognizer)
         
+        /// 设置动画代理
+        customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+        interactivitySecondViewController.transitioningDelegate = customTransitionDelegate
+        interactivitySecondViewController.modalPresentationStyle = .FullScreen
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,20 +56,14 @@ class InteractivityFirstViewController: UIViewController {
 extension InteractivityFirstViewController {
     func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .Began {
-            customTransitionDelegate.gestureRecognizer = sender
-            customTransitionDelegate.targetEdge = .Right
-            interactivitySecondViewController.transitioningDelegate = customTransitionDelegate
-            interactivitySecondViewController.modalPresentationStyle = .FullScreen
+            
         }
-    }
-    
-    func prepareForInteractiveTransition() {
-        
     }
 }
 
 extension InteractivityFirstViewController {
     func animationButtonDidClicked() {
+        customTransitionDelegate.targetEdge = .Right
         self.presentViewController(interactivitySecondViewController, animated: true, completion: nil)
     }
     

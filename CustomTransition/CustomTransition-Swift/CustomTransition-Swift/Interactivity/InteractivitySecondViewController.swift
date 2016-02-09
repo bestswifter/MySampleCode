@@ -30,7 +30,16 @@ class InteractivitySecondViewController: UIViewController {
         button.setTitle("Dismiss", forState: .Normal)
         button.addTarget(self, action: Selector("buttonDidClicked"), forControlEvents: .TouchUpInside)
         view.addSubview(button)
-        // Do any additional setup after loading the view.
+        
+        /// 添加滑动交互手势
+        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: Selector("interactiveTransitionRecognizerAction:"))
+        interactiveTransitionRecognizer.edges = .Right;
+        self.view.addGestureRecognizer(interactiveTransitionRecognizer)
+        
+        /// 设置动画代理
+        if let transitionDelegate = self.transitioningDelegate as? InteractivityTransitionDelegate {
+            transitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +54,9 @@ extension InteractivitySecondViewController {
         /**
         *  应该由FirstVC执行下面这行代码，为了保持demo简单，突出重点，这里的写法其实是不严格的，请见谅
         */
+        if let transitionDelegate = self.transitioningDelegate as? InteractivityTransitionDelegate {
+            transitionDelegate.targetEdge = .Left
+        }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
