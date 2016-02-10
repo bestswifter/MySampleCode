@@ -51,7 +51,6 @@ class InteractivityFirstViewController: UIViewController {
 extension InteractivityFirstViewController {
     func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .Began {
-            customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
             self.animationButtonDidClicked(sender)
         }
     }

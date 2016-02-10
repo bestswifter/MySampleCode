@@ -21,6 +21,7 @@ class InteractivityTransitionDelegate: NSObject, UIViewControllerTransitioningDe
     }
     
     /// 前两个函数和淡入淡出demo中的实现一致
+    /// 后两个函数用于实现交互式动画
     
     func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         if let gestureRecognizer = self.gestureRecognizer {

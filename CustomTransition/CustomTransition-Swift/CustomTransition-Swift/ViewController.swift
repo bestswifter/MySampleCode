@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let kScreenWidth = UIScreen.mainScreen().bounds.width, kScreenHeight = UIScreen.mainScreen().bounds.height
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: .Plain)
@@ -33,6 +34,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        if newCollection.verticalSizeClass == .Compact {
+            tableView.frame = CGRectMake(0, 0, kScreenHeight, kScreenWidth)
+        }
+        if newCollection.verticalSizeClass == .Regular {
+            tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
+        }
+    }
+    
+
 }
 
 // MARK: - 实现UITableViewDelegate协议
@@ -52,6 +64,8 @@ extension ViewController {
             nav = UINavigationController(rootViewController: CrossDissolveFirstViewController())
         case (0,1):
             nav = UINavigationController(rootViewController: InteractivityFirstViewController())
+        case (0,2):
+            nav = UINavigationController(rootViewController: CustomPresentationFirstViewController())
         default:
             nav = UINavigationController()
             break

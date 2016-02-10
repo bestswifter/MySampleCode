@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B34A0F01C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */; };
+		9B34A0F21C6AD8370085D279 /* CustomPresentationSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */; };
+		9B34A0F41C6AD85D0085D279 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */; };
 		9B5074F91C671E4A00C89416 /* CrossDissolveFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074F81C671E4A00C89416 /* CrossDissolveFirstViewController.swift */; };
 		9B5074FB1C68403000C89416 /* CrossDissolveSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */; };
 		9B5074FF1C6843CE00C89416 /* UIViewShortHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074FE1C6843CE00C89416 /* UIViewShortHand.swift */; };
@@ -24,6 +27,7 @@
 		9B5CEE0C1C66D44E003D0D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5CEE0A1C66D44E003D0D6F /* LaunchScreen.storyboard */; };
 		9B5CEE171C66D44F003D0D6F /* CustomTransition_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5CEE161C66D44F003D0D6F /* CustomTransition_SwiftTests.swift */; };
 		9B5CEE221C66D44F003D0D6F /* CustomTransition_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5CEE211C66D44F003D0D6F /* CustomTransition_SwiftUITests.swift */; };
+		9D51D2AFFDE101469A248793 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFF32D2745BC524127B1052 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BFF32D2745BC524127B1052 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		895BA2A0ACB38F3741EB2DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationFirstViewController.swift; sourceTree = "<group>"; };
+		9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationSecondViewController.swift; sourceTree = "<group>"; };
+		9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		9B5074F81C671E4A00C89416 /* CrossDissolveFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveFirstViewController.swift; sourceTree = "<group>"; };
 		9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveSecondViewController.swift; sourceTree = "<group>"; };
 		9B5074FE1C6843CE00C89416 /* UIViewShortHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewShortHand.swift; sourceTree = "<group>"; };
@@ -67,6 +76,7 @@
 		9B5CEE1D1C66D44F003D0D6F /* CustomTransition-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CustomTransition-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5CEE211C66D44F003D0D6F /* CustomTransition_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition_SwiftUITests.swift; sourceTree = "<group>"; };
 		9B5CEE231C66D44F003D0D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB54B1CB285AD7D45738DED6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D51D2AFFDE101469A248793 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +105,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B7B075FEB8B2A16ED5EC0C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB54B1CB285AD7D45738DED6 /* Pods.debug.xcconfig */,
+				895BA2A0ACB38F3741EB2DB5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B34A0EE1C6AD7800085D279 /* Custom Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */,
+				9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */,
+				9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */,
+			);
+			path = "Custom Presentation";
+			sourceTree = "<group>";
+		};
 		9B5074F71C671E2200C89416 /* Cross Dissolve */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +155,8 @@
 				9B5CEE151C66D44F003D0D6F /* CustomTransition-SwiftTests */,
 				9B5CEE201C66D44F003D0D6F /* CustomTransition-SwiftUITests */,
 				9B5CEDFF1C66D44E003D0D6F /* Products */,
+				0B7B075FEB8B2A16ED5EC0C9 /* Pods */,
+				C7F759BD514A0EA847D4763B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,8 +175,9 @@
 			children = (
 				9B5CEE011C66D44E003D0D6F /* AppDelegate.swift */,
 				9B5CEE031C66D44E003D0D6F /* ViewController.swift */,
-				9B5075081C68D91900C89416 /* Interactivity */,
 				9B5074F71C671E2200C89416 /* Cross Dissolve */,
+				9B5075081C68D91900C89416 /* Interactivity */,
+				9B34A0EE1C6AD7800085D279 /* Custom Presentation */,
 				9B5074FE1C6843CE00C89416 /* UIViewShortHand.swift */,
 				9B5CEE051C66D44E003D0D6F /* Main.storyboard */,
 				9B5CEE081C66D44E003D0D6F /* Assets.xcassets */,
@@ -172,6 +205,14 @@
 			path = "CustomTransition-SwiftUITests";
 			sourceTree = "<group>";
 		};
+		C7F759BD514A0EA847D4763B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BFF32D2745BC524127B1052 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B5CEE261C66D44F003D0D6F /* Build configuration list for PBXNativeTarget "CustomTransition-Swift" */;
 			buildPhases = (
+				52039C198AFCA9C2D9CDABB1 /* Check Pods Manifest.lock */,
 				9B5CEDFA1C66D44E003D0D6F /* Sources */,
 				9B5CEDFB1C66D44E003D0D6F /* Frameworks */,
 				9B5CEDFC1C66D44E003D0D6F /* Resources */,
+				FBDE29327038F4A7FD5F1D59 /* Embed Pods Frameworks */,
+				3355480DCC46F9AAD30F44BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,17 +345,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3355480DCC46F9AAD30F44BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52039C198AFCA9C2D9CDABB1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBDE29327038F4A7FD5F1D59 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B5CEDFA1C66D44E003D0D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9B5074FF1C6843CE00C89416 /* UIViewShortHand.swift in Sources */,
+				9B34A0F21C6AD8370085D279 /* CustomPresentationSecondViewController.swift in Sources */,
 				9B5074FB1C68403000C89416 /* CrossDissolveSecondViewController.swift in Sources */,
 				9B5CEE041C66D44E003D0D6F /* ViewController.swift in Sources */,
 				9B5074F91C671E4A00C89416 /* CrossDissolveFirstViewController.swift in Sources */,
 				9B5075101C68EC8C00C89416 /* InteractivityTransitionAnimator.swift in Sources */,
+				9B34A0F01C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift in Sources */,
 				9B50750C1C68D95600C89416 /* InteractivitySecondViewController.swift in Sources */,
+				9B34A0F41C6AD85D0085D279 /* CustomPresentationController.swift in Sources */,
 				9B5075051C68982400C89416 /* CrossDissolveAnimator.swift in Sources */,
 				9B5CEE021C66D44E003D0D6F /* AppDelegate.swift in Sources */,
 				9B5075071C68CBE800C89416 /* HalfWaySpringAnimator.swift in Sources */,
@@ -455,6 +550,7 @@
 		};
 		9B5CEE271C66D44F003D0D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB54B1CB285AD7D45738DED6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CustomTransition-Swift/Info.plist";
@@ -466,6 +562,7 @@
 		};
 		9B5CEE281C66D44F003D0D6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895BA2A0ACB38F3741EB2DB5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CustomTransition-Swift/Info.plist";

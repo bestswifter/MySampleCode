@@ -29,7 +29,7 @@ class InteractivitySecondViewController: UIViewController {
         button.frame.origin.y = view.frame.maxY - 100
         button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         button.setTitle("Dismiss", forState: .Normal)
-        button.addTarget(self, action: Selector("animationButtonDidClicked:"), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: Selector("buttonDidClicked:"), forControlEvents: .TouchUpInside)
         view.addSubview(button)
         
         /// 添加滑动交互手势
@@ -46,13 +46,13 @@ class InteractivitySecondViewController: UIViewController {
 extension InteractivitySecondViewController {
     func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .Began {
-            self.animationButtonDidClicked(sender)
+            self.buttonDidClicked(sender)
         }
     }
 }
 
 extension InteractivitySecondViewController {
-    func animationButtonDidClicked(sender: AnyObject) {
+    func buttonDidClicked(sender: AnyObject) {
         /**
         *  应该由FirstVC执行下面这行代码，为了保持demo简单，突出重点，这里的写法其实是不严格的，请见谅
         */
