@@ -32,11 +32,12 @@ class InteractivityTransitionAnimator: NSObject, UIViewControllerAnimatedTransit
             toView = transitionContext.viewForKey(UITransitionContextToViewKey)
         }
         
+        /// isPresenting用于判断当前是present还是dismiss
         let isPresenting = (toViewController?.presentingViewController == fromViewController)
-        
         let fromFrame = transitionContext.initialFrameForViewController(fromViewController!)
         let toFrame = transitionContext.finalFrameForViewController(toViewController!)
         
+        /// offset结构体将用于计算toView的位置
         let offset: CGVector
         switch self.targetEdge {
         case UIRectEdge.Top: offset = CGVectorMake(0, 1)
@@ -46,8 +47,8 @@ class InteractivityTransitionAnimator: NSObject, UIViewControllerAnimatedTransit
         default:fatalError("targetEdge must be one of UIRectEdgeTop, UIRectEdgeBottom, UIRectEdgeLeft, or UIRectEdgeRight.")
         }
         
+        /// 根据当前是dismiss还是present，横屏还是竖屏，计算好toView的初始位置以及结束位置
         if isPresenting {
-            // For a presentation, the toView starts off-screen and slides in.
             fromView?.frame = fromFrame
             toView?.frame = CGRectOffset(toFrame, toFrame.size.width * offset.dx * -1,
                                                   toFrame.size.height * offset.dy * -1)
@@ -62,7 +63,6 @@ class InteractivityTransitionAnimator: NSObject, UIViewControllerAnimatedTransit
             if isPresenting {
                 toView?.frame = toFrame
             } else {
-                // For a dismissal, the fromView slides off the screen.
                 fromView?.frame = CGRectOffset(fromFrame, fromFrame.size.width * offset.dx,
                     fromFrame.size.height * offset.dy)
             }

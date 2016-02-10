@@ -131,9 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				9B5074F81C671E4A00C89416 /* CrossDissolveFirstViewController.swift */,
+				9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */,
 				9B5075061C68CBE800C89416 /* HalfWaySpringAnimator.swift */,
 				9B5075041C68982400C89416 /* CrossDissolveAnimator.swift */,
-				9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */,
 			);
 			path = "Cross Dissolve";
 			sourceTree = "<group>";

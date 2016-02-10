@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let kScreenWidth = UIScreen.mainScreen().bounds.width, kScreenHeight = UIScreen.mainScreen().bounds.height
-    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: .Plain)
         tableView.delegate = self
@@ -20,31 +18,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tableView
     }()
     
-    let headetTitleArray = ["Presentation Transitions", "Navigation Controller Transitions", "TabBar Controller Transitions"]
-    let cellTitleArray = [["淡入淡出", "滑动", "自定义Presentation", "自适应Presentation"], ["棋盘效果"], ["滑动效果"]]
-    let cellSubtitleArray = [["一种淡入淡出的动画", "一种交互式切换","使用presentation controller改变被展示的ViewController的布局", "使用自定义presentation适应水平宽度为compact的情况"], ["使用Core Animation实现的进阶动画"], ["使用UITabBar实现的交互式动画"]]
+    let headetTitleArray = ["Presentation Transitions"]
+    let cellTitleArray = ["淡入淡出", "滑动", "自定义Presentation"]
+    let cellSubtitleArray = ["一种淡入淡出的动画", "一种交互式切换","使用presentation controller改变被展示的ViewController的布局"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "自定义页面跳转动画"
         view.addSubview(tableView)
+        tableView.snp_makeConstraints { (make) -> Void in
+            make.edges.equalTo(view)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        if newCollection.verticalSizeClass == .Compact {
-            tableView.frame = CGRectMake(0, 0, kScreenHeight, kScreenWidth)
-        }
-        if newCollection.verticalSizeClass == .Regular {
-            tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
-        }
-    }
-    
-
 }
 
 // MARK: - 实现UITableViewDelegate协议
@@ -59,12 +49,12 @@ extension ViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let nav: UINavigationController
-        switch (indexPath.section, indexPath.row) {
-        case (0,0):
+        switch indexPath.row {
+        case 0:
             nav = UINavigationController(rootViewController: CrossDissolveFirstViewController())
-        case (0,1):
+        case 1:
             nav = UINavigationController(rootViewController: InteractivityFirstViewController())
-        case (0,2):
+        case 2:
             nav = UINavigationController(rootViewController: CustomPresentationFirstViewController())
         default:
             nav = UINavigationController()
@@ -84,13 +74,13 @@ extension ViewController {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellTitleArray[section].count
+        return cellTitleArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell = UITableViewCell(style: .Subtitle, reuseIdentifier: String(UITableViewCell))
-        tableViewCell.textLabel?.text = cellTitleArray[indexPath.section][indexPath.row]
-        tableViewCell.detailTextLabel?.text = cellSubtitleArray[indexPath.section][indexPath.row]
+        tableViewCell.textLabel?.text = cellTitleArray[indexPath.row]
+        tableViewCell.detailTextLabel?.text = cellSubtitleArray[indexPath.row]
         tableViewCell.selectionStyle = .None
         return tableViewCell
     }

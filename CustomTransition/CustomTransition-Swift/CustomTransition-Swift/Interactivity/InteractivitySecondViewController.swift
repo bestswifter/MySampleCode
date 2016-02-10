@@ -13,24 +13,7 @@ class InteractivitySecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = [254, 223, 224].color    // 设置背景颜色
-        
-        /// 创建label
-        let label = UILabel(frame: CGRectMake(0,0,150,100))
-        label.center = view.center
-        label.text = "To"
-        label.textAlignment = .Center
-        label.font = UIFont(name: "Helvetica", size: 60)
-        view.addSubview(label)
-        
-        /// 创建button
-        let button = UIButton(frame: CGRectMake(0,0,250,60))
-        button.center = view.center
-        button.frame.origin.y = view.frame.maxY - 100
-        button.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        button.setTitle("Dismiss", forState: .Normal)
-        button.addTarget(self, action: Selector("buttonDidClicked:"), forControlEvents: .TouchUpInside)
-        view.addSubview(button)
+        setupView() // 主要是一些UI控件的布局，可以无视其实现细节
         
         /// 添加滑动交互手势
         interactiveTransitionRecognizer.edges = .Left
@@ -43,6 +26,7 @@ class InteractivitySecondViewController: UIViewController {
     }
 }
 
+// MARK: - 手势识别
 extension InteractivitySecondViewController {
     func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .Began {
@@ -51,11 +35,10 @@ extension InteractivitySecondViewController {
     }
 }
 
+// MARK: - 处理UI控件的点击事件
 extension InteractivitySecondViewController {
     func buttonDidClicked(sender: AnyObject) {
-        /**
-        *  应该由FirstVC执行下面这行代码，为了保持demo简单，突出重点，这里的写法其实是不严格的，请见谅
-        */
+        // 和FirstViewController中的代码是类似的，不过返回时手势应该是从左向右
         if let transitionDelegate = self.transitioningDelegate as? InteractivityTransitionDelegate {
             if sender.isKindOfClass(UIGestureRecognizer) {
                 transitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
@@ -65,6 +48,38 @@ extension InteractivitySecondViewController {
             }
             transitionDelegate.targetEdge = .Left
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+// MARK: - 对视图上的基本UI控件进行初始化，读者可以忽略
+extension InteractivitySecondViewController {
+    func setupView() {
+        view.backgroundColor = [254, 223, 224].color    // 设置背景颜色
+        
+        /// 创建label
+        let label = UILabel()
+        label.text = "To"
+        label.textAlignment = .Center
+        label.font = UIFont(name: "Helvetica", size: 60)
+        view.addSubview(label)
+        label.snp_makeConstraints { (make) -> Void in
+            make.center.equalTo(view)
+            make.width.equalTo(150)
+            make.height.equalTo(60)
+        }
+        
+        /// 创建button
+        let button = UIButton()
+        button.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        button.setTitle("Dismiss", forState: .Normal)
+        button.addTarget(self, action: Selector("buttonDidClicked:"), forControlEvents: .TouchUpInside)
+        view.addSubview(button)
+        button.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(view)
+            make.width.equalTo(250)
+            make.height.equalTo(60)
+            make.bottom.equalTo(view).offset(-40)
+        }
     }
 }

@@ -14,6 +14,47 @@ class CustomPresentationSecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView() // 主要是一些UI控件的布局，可以无视其实现细节
+        
+        self.updatePreferredContentSizeWithTraitCollection(self.traitCollection)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+// MARK: - Layout
+extension CustomPresentationSecondViewController {
+    func updatePreferredContentSizeWithTraitCollection(traitCollection: UITraitCollection) {
+        self.preferredContentSize = CGSizeMake(self.view.bounds.size.width, traitCollection.verticalSizeClass == .Compact ? 270 : 420)
+        
+        slider.maximumValue = Float(self.preferredContentSize.height)
+        slider.minimumValue = 220
+        slider.value = self.slider.maximumValue
+    }
+    
+    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+        self.updatePreferredContentSizeWithTraitCollection(newCollection)
+    }
+}
+
+// MARK: - UI事件处理
+extension CustomPresentationSecondViewController {
+    func buttonDidClicked() {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func sliderValueChange(sender: UISlider) {
+        self.preferredContentSize = CGSizeMake(self.view.bounds.size.width, CGFloat(sender.value))
+    }
+}
+
+// MARK: - 对视图上的基本UI控件进行初始化，读者可以忽略
+extension CustomPresentationSecondViewController {
+    func setupView() {
         view.backgroundColor = [254, 223, 224].color    // 设置背景颜色
         
         /// 创建label
@@ -48,41 +89,5 @@ class CustomPresentationSecondViewController: UIViewController {
             make.centerX.equalTo(view)
             make.width.equalTo(245)
         }
-        
-        self.updatePreferredContentSizeWithTraitCollection(self.traitCollection)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-extension CustomPresentationSecondViewController {
-    func updatePreferredContentSizeWithTraitCollection(traitCollection: UITraitCollection) {
-        self.preferredContentSize = CGSizeMake(self.view.bounds.size.width, traitCollection.verticalSizeClass == .Compact ? 270 : 420)
-        
-        slider.maximumValue = Float(self.preferredContentSize.height)
-        slider.minimumValue = 220
-        slider.value = self.slider.maximumValue
-    }
-    
-    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
-        self.updatePreferredContentSizeWithTraitCollection(newCollection)
-    }
-}
-
-extension CustomPresentationSecondViewController {
-    func buttonDidClicked() {
-        /**
-        *  应该由FirstVC执行下面这行代码，为了保持demo简单，突出重点，这里的写法其实是不严格的，请见谅
-        */
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func sliderValueChange(sender: UISlider) {
-        self.preferredContentSize = CGSizeMake(self.view.bounds.size.width, CGFloat(sender.value))
-    }
-    
 }

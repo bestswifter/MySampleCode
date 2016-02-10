@@ -29,6 +29,13 @@ class TransitionInteractionController: UIPercentDrivenInteractiveTransition {
         super.startInteractiveTransition(transitionContext)
     }
     
+    /**
+     用于根据计算动画完成的百分比
+     
+     :param: gesture 当前的滑动手势，通过这个手势获取滑动的位移
+     
+     :returns: 返回动画完成的百分比
+     */
     private func percentForGesture(gesture: UIScreenEdgePanGestureRecognizer) -> CGFloat {
         let transitionContainerView = transitionContext?.containerView()
         let locationInSourceView = gesture.locationInView(transitionContainerView)
@@ -45,11 +52,12 @@ class TransitionInteractionController: UIPercentDrivenInteractiveTransition {
         }
     }
     
+    /// 当手势有滑动时触发这个函数
     func gestureRecognizeDidUpdate(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         switch gestureRecognizer.state {
         case .Began: break
-        case .Changed: self.updateInteractiveTransition(self.percentForGesture(gestureRecognizer))
-        case .Ended:
+        case .Changed: self.updateInteractiveTransition(self.percentForGesture(gestureRecognizer))  //手势滑动，更新百分比
+        case .Ended:    // 滑动结束，判断是否超过一半，如果是则完成剩下的动画，否则取消动画
             if self.percentForGesture(gestureRecognizer) >= 0.5 {
                 self.finishInteractiveTransition()
             }
