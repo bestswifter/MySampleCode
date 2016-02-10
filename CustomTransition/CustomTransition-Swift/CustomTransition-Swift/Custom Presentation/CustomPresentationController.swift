@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomPresentationController: UIPresentationController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
+class CustomPresentationController: UIPresentationController, UIViewControllerTransitioningDelegate {
     
     let CORNER_RADIUS: CGFloat = 16
     var presentationWrappingView: UIView? = nil
@@ -20,6 +20,13 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         presentedViewController.modalPresentationStyle = .Custom
     }
     
+    override func presentedView() -> UIView? {
+        return self.presentationWrappingView
+    }
+}
+
+// MARK: - 两组对应的方法，实现自定义presentation
+extension CustomPresentationController {
     override func presentationTransitionWillBegin() {
         let presentedViewControllerView = super.presentedView()
         let presentationWrapperView = UIView(frame: self.frameOfPresentedViewInContainerView())
@@ -47,7 +54,7 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         dimmingView.opaque = false
         dimmingView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dimmingViewTapped:")))
-        self.dimmingView = dimmingView;
+        self.dimmingView = dimmingView
         self.containerView?.addSubview(dimmingView)
         
         let transitionCoordinator = self.presentingViewController.transitionCoordinator()
@@ -79,58 +86,46 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     }
 }
 
-
+// MARK: - UI事件处理
 extension CustomPresentationController {
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        if let isAnimated = transitionContext?.isAnimated() {
-            return isAnimated ? 0.35 : 0
+    func dimmingViewTapped(sender: UITapGestureRecognizer) {
+        self.presentingViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+// MARK: - Autolayout
+extension CustomPresentationController {
+    override func preferredContentSizeDidChangeForChildContentContainer(container: UIContentContainer) {
+        super.preferredContentSizeDidChangeForChildContentContainer(container)
+        
+        if let container = container as? UIViewController where
+                container == self.presentedViewController{
+            self.containerView?.setNeedsLayout()
         }
-        return 0
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        let containerView = transitionContext.containerView()
-        
-        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)
-        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)
-        let isPresenting = (self.presentingViewController == fromViewController)
-        
-        let fromViewInitialFrame = transitionContext.initialFrameForViewController(fromViewController!)
-        var fromViewFinalFrame = transitionContext.finalFrameForViewController(fromViewController!)
-        var toViewInitialFrame = transitionContext.initialFrameForViewController(toViewController!)
-        let toViewFinalFrame = transitionContext.finalFrameForViewController(toViewController!)
-        
-        if toView != nil {
-            containerView?.addSubview(toView!)
+    override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+        if let container = container as? UIViewController where
+            container == self.presentedViewController{
+            return container.preferredContentSize
         }
+        else {
+            return super.sizeForChildContentContainer(container, withParentContainerSize: parentSize)
+        }
+    }
     
-        if isPresenting {
-            toViewInitialFrame.origin = CGPointMake(CGRectGetMinX(containerView!.bounds), CGRectGetMaxY(containerView!.bounds));
-            toViewInitialFrame.size = toViewFinalFrame.size;
-            toView?.frame = toViewInitialFrame;
-        } else {
-            // Because our presentation wraps the presented view controller's view
-            // in an intermediate view hierarchy, it is more accurate to rely
-            // on the current frame of fromView than fromViewInitialFrame as the
-            // initial frame (though in this example they will be the same).
-            fromViewFinalFrame = CGRectOffset(fromView!.frame, 0, CGRectGetHeight(fromView!.frame));
-        }
+    override func frameOfPresentedViewInContainerView() -> CGRect {
+        let containerViewBounds = self.containerView?.bounds
+        let presentedViewContentSize = self.sizeForChildContentContainer(self.presentedViewController, withParentContainerSize: (containerViewBounds?.size)!)
+        let presentedViewControllerFrame = CGRectMake(containerViewBounds!.origin.x, CGRectGetMaxY(containerViewBounds!) - presentedViewContentSize.height, (containerViewBounds?.size.width)!, presentedViewContentSize.height)
+        return presentedViewControllerFrame
+    }
     
-        let transitionDuration = self.transitionDuration(transitionContext)
-        UIView.animateWithDuration(transitionDuration, animations: {
-            if isPresenting {
-                toView?.frame = toViewFinalFrame;
-            }
-            else {
-                fromView?.frame = fromViewFinalFrame;
-            }
-            
-            }) { (finished: Bool) -> Void in
-                let wasCancelled = transitionContext.transitionWasCancelled()
-                transitionContext.completeTransition(!wasCancelled)
-        }
+    override func containerViewWillLayoutSubviews() {
+        super.containerViewWillLayoutSubviews()
+        
+        self.dimmingView?.frame = (self.containerView?.bounds)!
+        self.presentationWrappingView?.frame = self.frameOfPresentedViewInContainerView()
     }
 }
 
@@ -141,10 +136,10 @@ extension CustomPresentationController {
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
+        return CustomPresentationAnimator()
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
+        return CustomPresentationAnimator()
     }
 }

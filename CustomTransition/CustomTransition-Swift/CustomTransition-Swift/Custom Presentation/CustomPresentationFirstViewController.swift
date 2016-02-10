@@ -43,6 +43,7 @@ class CustomPresentationFirstViewController: UIViewController {
     }
 }
 
+// MARK: - UI事件处理
 extension CustomPresentationFirstViewController {
     func animationButtonDidClicked() {
         customPresentationSecondViewController.transitioningDelegate = customPresentationController

@@ -38,7 +38,7 @@ class InteractivityFirstViewController: UIViewController {
         view.addSubview(button)
         
         /// 添加滑动交互手势
-        interactiveTransitionRecognizer.edges = .Right;
+        interactiveTransitionRecognizer.edges = .Right
         self.view.addGestureRecognizer(interactiveTransitionRecognizer)
     }
 

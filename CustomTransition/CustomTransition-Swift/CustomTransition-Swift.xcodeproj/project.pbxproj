@@ -10,6 +10,7 @@
 		9B34A0F01C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */; };
 		9B34A0F21C6AD8370085D279 /* CustomPresentationSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */; };
 		9B34A0F41C6AD85D0085D279 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */; };
+		9B34A1301C6B42110085D279 /* CustomPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34A12F1C6B42110085D279 /* CustomPresentationAnimator.swift */; };
 		9B5074F91C671E4A00C89416 /* CrossDissolveFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074F81C671E4A00C89416 /* CrossDissolveFirstViewController.swift */; };
 		9B5074FB1C68403000C89416 /* CrossDissolveSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */; };
 		9B5074FF1C6843CE00C89416 /* UIViewShortHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5074FE1C6843CE00C89416 /* UIViewShortHand.swift */; };
@@ -53,6 +54,7 @@
 		9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationFirstViewController.swift; sourceTree = "<group>"; };
 		9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationSecondViewController.swift; sourceTree = "<group>"; };
 		9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		9B34A12F1C6B42110085D279 /* CustomPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationAnimator.swift; sourceTree = "<group>"; };
 		9B5074F81C671E4A00C89416 /* CrossDissolveFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveFirstViewController.swift; sourceTree = "<group>"; };
 		9B5074FA1C68403000C89416 /* CrossDissolveSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveSecondViewController.swift; sourceTree = "<group>"; };
 		9B5074FE1C6843CE00C89416 /* UIViewShortHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewShortHand.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				9B34A0EF1C6AD7FC0085D279 /* CustomPresentationFirstViewController.swift */,
 				9B34A0F11C6AD8370085D279 /* CustomPresentationSecondViewController.swift */,
 				9B34A0F31C6AD85D0085D279 /* CustomPresentationController.swift */,
+				9B34A12F1C6B42110085D279 /* CustomPresentationAnimator.swift */,
 			);
 			path = "Custom Presentation";
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				9B50750C1C68D95600C89416 /* InteractivitySecondViewController.swift in Sources */,
 				9B34A0F41C6AD85D0085D279 /* CustomPresentationController.swift in Sources */,
 				9B5075051C68982400C89416 /* CrossDissolveAnimator.swift in Sources */,
+				9B34A1301C6B42110085D279 /* CustomPresentationAnimator.swift in Sources */,
 				9B5CEE021C66D44E003D0D6F /* AppDelegate.swift in Sources */,
 				9B5075071C68CBE800C89416 /* HalfWaySpringAnimator.swift in Sources */,
 				9B50750A1C68D94400C89416 /* InteractivityFirstViewController.swift in Sources */,

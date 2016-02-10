@@ -60,11 +60,11 @@ class InteractivityTransitionAnimator: NSObject, UIViewControllerAnimatedTransit
         
         UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { () -> Void in
             if isPresenting {
-                toView?.frame = toFrame;
+                toView?.frame = toFrame
             } else {
                 // For a dismissal, the fromView slides off the screen.
                 fromView?.frame = CGRectOffset(fromFrame, fromFrame.size.width * offset.dx,
-                    fromFrame.size.height * offset.dy);
+                    fromFrame.size.height * offset.dy)
             }
             }) { (finished: Bool) -> Void in
                 let wasCanceled = transitionContext.transitionWasCancelled()

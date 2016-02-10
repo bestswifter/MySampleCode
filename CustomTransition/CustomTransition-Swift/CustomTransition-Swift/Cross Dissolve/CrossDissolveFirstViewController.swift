@@ -37,7 +37,7 @@ class CrossDissolveFirstViewController: UIViewController, UIViewControllerTransi
         
         /// 为了使用自定义present动画进行的一些设置
         crossDissolveSecondViewController.modalPresentationStyle = .FullScreen
-        crossDissolveSecondViewController.transitioningDelegate = self;
+        crossDissolveSecondViewController.transitioningDelegate = self
     }
 }
 
