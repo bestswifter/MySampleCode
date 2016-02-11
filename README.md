@@ -8,6 +8,7 @@
 
 这些demo都是用来配合我的博客，你可以选择在简书或我的个人博客阅读文章，水平有限欢迎指正。
 
+* iOS自定义转场动画实战讲解 [简书](http://www.jianshu.com/p/ea0132738057)、[bestswifter](http://bestswifter.com/custom-transition-animation/)
 * 你应该知道的Swift小tips：[简书](http://www.jianshu.com/p/a11c6060176c)
 * 你其实真的不懂print("Hello,world")：[简书](http://www.jianshu.com/p/abb55919c453)、[bestswifter](http://bestswifter.com/helloworld/)
 * OC的runtime小故事：[简书](http://www.jianshu.com/p/295cd2b6b42e)
