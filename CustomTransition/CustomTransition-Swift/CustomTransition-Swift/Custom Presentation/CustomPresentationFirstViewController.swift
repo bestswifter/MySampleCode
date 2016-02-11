@@ -15,6 +15,8 @@ class CustomPresentationFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView() // 主要是一些UI控件的布局，可以无视其实现细节
+        
+        customPresentationSecondViewController.transitioningDelegate = customPresentationController
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +28,6 @@ class CustomPresentationFirstViewController: UIViewController {
 // MARK: - UI事件处理
 extension CustomPresentationFirstViewController {
     func animationButtonDidClicked() {
-        customPresentationSecondViewController.transitioningDelegate = customPresentationController
         self.presentViewController(customPresentationSecondViewController, animated: true, completion: nil)
     }
     

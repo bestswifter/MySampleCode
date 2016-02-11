@@ -12,7 +12,7 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     
     let CORNER_RADIUS: CGFloat = 16
     var presentationWrappingView: UIView? = nil // 被添加动画效果的view，在presentedViewController的基础上添加了其他效果
-    var dimmingView: UIView? = nil
+    var dimmingView: UIView? = nil  // alpha为0.5的黑色蒙版
     
     override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)

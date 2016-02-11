@@ -12,7 +12,7 @@ import UIKit
 class HalfWaySpringAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     /// 设置动画的持续时间
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1
+        return 2
     }
     
     /// 设置动画的进行方式，附有详细注释，demo中其他地方的这个方法不再解释
