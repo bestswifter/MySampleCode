@@ -10,10 +10,10 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    let imgView1 = UIImageView(frame: CGRectMake(20, 20, 60, 60))
-    let imgView2 = UIImageView(frame: CGRectMake(100, 20, 60, 60))
-    let imgView3 = UIImageView(frame: CGRectMake(180, 20, 60, 60))
-    let imgView4 = UIImageView(frame: CGRectMake(260, 20, 60, 60))
+    let imgView1 = UIImageView(frame: CGRectMake(20, 20, 60, 61))
+    let imgView2 = UIImageView(frame: CGRectMake(100, 20, 60, 61))
+    let imgView3 = UIImageView(frame: CGRectMake(180, 20, 60, 61))
+    let imgView4 = UIImageView(frame: CGRectMake(260, 20, 60, 61))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
