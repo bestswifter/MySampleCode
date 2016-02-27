@@ -49,7 +49,7 @@ class CustomTableViewCell: UITableViewCell {
         imgView1.image = UIImage(named: imgName)
         imgView2.image = UIImage(named: imgName)
         imgView3.image = UIImage(named: imgName)
-        imgView4.image = UIImage(named: imgName)
+        imgView4.image = UIImage(named: "photo")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
