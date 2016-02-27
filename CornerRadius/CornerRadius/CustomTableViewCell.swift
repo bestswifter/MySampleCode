@@ -20,7 +20,6 @@ class CustomTableViewCell: UITableViewCell {
         
         imgView1.layer.cornerRadius = 30
         imgView1.layer.masksToBounds = true
-        self.contentView.addSubview(imgView1)
         
         imgView2.layer.cornerRadius = 30
         imgView2.layer.masksToBounds = true
@@ -31,6 +30,7 @@ class CustomTableViewCell: UITableViewCell {
         imgView4.layer.cornerRadius = 30
         imgView4.layer.masksToBounds = true
         
+        self.contentView.addSubview(imgView1)
         self.contentView.addSubview(imgView2)
         self.contentView.addSubview(imgView3)
         self.contentView.addSubview(imgView4)
