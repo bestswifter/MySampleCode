@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B4915461C81D6080008161A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915451C81D6080008161A /* AppDelegate.swift */; };
+		9B4915481C81D6080008161A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915471C81D6080008161A /* ViewController.swift */; };
+		9B49154B1C81D6080008161A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4915491C81D6080008161A /* Main.storyboard */; };
+		9B49154D1C81D6080008161A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B49154C1C81D6080008161A /* Assets.xcassets */; };
+		9B4915501C81D6080008161A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B49154E1C81D6080008161A /* LaunchScreen.storyboard */; };
+		9B49155B1C81D6080008161A /* CornerRadiusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49155A1C81D6080008161A /* CornerRadiusTests.swift */; };
+		9B4915661C81D6080008161A /* CornerRadiusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915651C81D6080008161A /* CornerRadiusUITests.swift */; };
+		9B4915741C81D77D0008161A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915731C81D77D0008161A /* CustomTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B4915571C81D6080008161A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B49153A1C81D6080008161A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B4915411C81D6080008161A;
+			remoteInfo = CornerRadius;
+		};
+		9B4915621C81D6080008161A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B49153A1C81D6080008161A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B4915411C81D6080008161A;
+			remoteInfo = CornerRadius;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B4915421C81D6080008161A /* CornerRadius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornerRadius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4915451C81D6080008161A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B4915471C81D6080008161A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B49154A1C81D6080008161A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B49154C1C81D6080008161A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B49154F1C81D6080008161A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B4915511C81D6080008161A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4915561C81D6080008161A /* CornerRadiusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CornerRadiusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B49155A1C81D6080008161A /* CornerRadiusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusTests.swift; sourceTree = "<group>"; };
+		9B49155C1C81D6080008161A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4915611C81D6080008161A /* CornerRadiusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CornerRadiusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4915651C81D6080008161A /* CornerRadiusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusUITests.swift; sourceTree = "<group>"; };
+		9B4915671C81D6080008161A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4915731C81D77D0008161A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B49153F1C81D6080008161A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4915531C81D6080008161A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B49155E1C81D6080008161A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B4915391C81D6080008161A = {
+			isa = PBXGroup;
+			children = (
+				9B4915441C81D6080008161A /* CornerRadius */,
+				9B4915591C81D6080008161A /* CornerRadiusTests */,
+				9B4915641C81D6080008161A /* CornerRadiusUITests */,
+				9B4915431C81D6080008161A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B4915431C81D6080008161A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B4915421C81D6080008161A /* CornerRadius.app */,
+				9B4915561C81D6080008161A /* CornerRadiusTests.xctest */,
+				9B4915611C81D6080008161A /* CornerRadiusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B4915441C81D6080008161A /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				9B4915451C81D6080008161A /* AppDelegate.swift */,
+				9B4915471C81D6080008161A /* ViewController.swift */,
+				9B4915731C81D77D0008161A /* CustomTableViewCell.swift */,
+				9B4915491C81D6080008161A /* Main.storyboard */,
+				9B49154C1C81D6080008161A /* Assets.xcassets */,
+				9B49154E1C81D6080008161A /* LaunchScreen.storyboard */,
+				9B4915511C81D6080008161A /* Info.plist */,
+			);
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
+		9B4915591C81D6080008161A /* CornerRadiusTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B49155A1C81D6080008161A /* CornerRadiusTests.swift */,
+				9B49155C1C81D6080008161A /* Info.plist */,
+			);
+			path = CornerRadiusTests;
+			sourceTree = "<group>";
+		};
+		9B4915641C81D6080008161A /* CornerRadiusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B4915651C81D6080008161A /* CornerRadiusUITests.swift */,
+				9B4915671C81D6080008161A /* Info.plist */,
+			);
+			path = CornerRadiusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B4915411C81D6080008161A /* CornerRadius */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B49156A1C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadius" */;
+			buildPhases = (
+				9B49153E1C81D6080008161A /* Sources */,
+				9B49153F1C81D6080008161A /* Frameworks */,
+				9B4915401C81D6080008161A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CornerRadius;
+			productName = CornerRadius;
+			productReference = 9B4915421C81D6080008161A /* CornerRadius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B4915551C81D6080008161A /* CornerRadiusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B49156D1C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusTests" */;
+			buildPhases = (
+				9B4915521C81D6080008161A /* Sources */,
+				9B4915531C81D6080008161A /* Frameworks */,
+				9B4915541C81D6080008161A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B4915581C81D6080008161A /* PBXTargetDependency */,
+			);
+			name = CornerRadiusTests;
+			productName = CornerRadiusTests;
+			productReference = 9B4915561C81D6080008161A /* CornerRadiusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B4915601C81D6080008161A /* CornerRadiusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B4915701C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusUITests" */;
+			buildPhases = (
+				9B49155D1C81D6080008161A /* Sources */,
+				9B49155E1C81D6080008161A /* Frameworks */,
+				9B49155F1C81D6080008161A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B4915631C81D6080008161A /* PBXTargetDependency */,
+			);
+			name = CornerRadiusUITests;
+			productName = CornerRadiusUITests;
+			productReference = 9B4915611C81D6080008161A /* CornerRadiusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B49153A1C81D6080008161A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = zxy;
+				TargetAttributes = {
+					9B4915411C81D6080008161A = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U2HX3RFD94;
+					};
+					9B4915551C81D6080008161A = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U2HX3RFD94;
+						TestTargetID = 9B4915411C81D6080008161A;
+					};
+					9B4915601C81D6080008161A = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U2HX3RFD94;
+						TestTargetID = 9B4915411C81D6080008161A;
+					};
+				};
+			};
+			buildConfigurationList = 9B49153D1C81D6080008161A /* Build configuration list for PBXProject "CornerRadius" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B4915391C81D6080008161A;
+			productRefGroup = 9B4915431C81D6080008161A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B4915411C81D6080008161A /* CornerRadius */,
+				9B4915551C81D6080008161A /* CornerRadiusTests */,
+				9B4915601C81D6080008161A /* CornerRadiusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B4915401C81D6080008161A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4915501C81D6080008161A /* LaunchScreen.storyboard in Resources */,
+				9B49154D1C81D6080008161A /* Assets.xcassets in Resources */,
+				9B49154B1C81D6080008161A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4915541C81D6080008161A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B49155F1C81D6080008161A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B49153E1C81D6080008161A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4915741C81D77D0008161A /* CustomTableViewCell.swift in Sources */,
+				9B4915481C81D6080008161A /* ViewController.swift in Sources */,
+				9B4915461C81D6080008161A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4915521C81D6080008161A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B49155B1C81D6080008161A /* CornerRadiusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B49155D1C81D6080008161A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4915661C81D6080008161A /* CornerRadiusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B4915581C81D6080008161A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B4915411C81D6080008161A /* CornerRadius */;
+			targetProxy = 9B4915571C81D6080008161A /* PBXContainerItemProxy */;
+		};
+		9B4915631C81D6080008161A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B4915411C81D6080008161A /* CornerRadius */;
+			targetProxy = 9B4915621C81D6080008161A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B4915491C81D6080008161A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B49154A1C81D6080008161A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B49154E1C81D6080008161A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B49154F1C81D6080008161A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B4915681C81D6080008161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B4915691C81D6080008161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B49156B1C81D6080008161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CornerRadius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B49156C1C81D6080008161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CornerRadius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9B49156E1C81D6080008161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CornerRadiusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadiusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CornerRadius.app/CornerRadius";
+			};
+			name = Debug;
+		};
+		9B49156F1C81D6080008161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CornerRadiusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadiusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CornerRadius.app/CornerRadius";
+			};
+			name = Release;
+		};
+		9B4915711C81D6080008161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CornerRadiusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadiusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CornerRadius;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9B4915721C81D6080008161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CornerRadiusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadiusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CornerRadius;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B49153D1C81D6080008161A /* Build configuration list for PBXProject "CornerRadius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4915681C81D6080008161A /* Debug */,
+				9B4915691C81D6080008161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B49156A1C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B49156B1C81D6080008161A /* Debug */,
+				9B49156C1C81D6080008161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B49156D1C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B49156E1C81D6080008161A /* Debug */,
+				9B49156F1C81D6080008161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B4915701C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4915711C81D6080008161A /* Debug */,
+				9B4915721C81D6080008161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B49153A1C81D6080008161A /* Project object */;
+}
