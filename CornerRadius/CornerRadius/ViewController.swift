@@ -27,12 +27,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "tableviewcell"
-        var cell = table.dequeueReusableCellWithIdentifier(identifier) as? CustomTableViewCell
-        if cell == nil {
-            cell = CustomTableViewCell(style: .Default, reuseIdentifier: identifier)
-            cell?.selectionStyle = .None
-        }
-        
+        table.registerClass(CustomTableViewCell.self, forCellReuseIdentifier: identifier)
+        let cell = table.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as? CustomTableViewCell
+
+        cell?.selectionStyle = .None
         cell?.setupContent(imgName: "photo")
         
         return cell!
