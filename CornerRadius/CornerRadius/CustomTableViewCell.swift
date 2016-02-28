@@ -27,9 +27,10 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(view)
         
         
-        label.kt_addCorner(radius: 8)
-//        label.layer.cornerRadius = 5
+//        label.kt_addCorner(radius: 8)
+        label.layer.cornerRadius = 5
         label.text = "123"
+        label.backgroundColor = UIColor.brownColor()
         self.contentView.addSubview(label)
     }
 
