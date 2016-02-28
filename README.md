@@ -8,6 +8,7 @@
 
 这些demo都是用来配合我的博客，你可以选择在简书或我的个人博客阅读文章，水平有限欢迎指正。
 
+* iOS 高效添加圆角效果实战讲解 [简书](http://www.jianshu.com/p/f970872fdc22)、[bestswifter](http://bestswifter.com/efficient-rounded-corner/)
 * 当 `UIColor` 遇上 Swift [简书](http://www.jianshu.com/p/f2173235cde8)、[bestswifter](http://bestswifter.com/uicolorliteral/)
 * iOS自定义转场动画实战讲解 [简书](http://www.jianshu.com/p/ea0132738057)、[bestswifter](http://bestswifter.com/custom-transition-animation/)
 * 你应该知道的Swift小tips：[简书](http://www.jianshu.com/p/a11c6060176c)

@@ -17,11 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.dataSource = self
         
         view.addSubview(table)
-        
-        let imageView = UIImageView(image: UIImage(named: "photo"))
-        imageView.frame = CGRectMake(100, 100, 200, 200)
-        imageView.kt_addCorner(radius: 20)
-//        view.addSubview(imageView)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
