@@ -15,6 +15,7 @@
 		9B49155B1C81D6080008161A /* CornerRadiusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49155A1C81D6080008161A /* CornerRadiusTests.swift */; };
 		9B4915661C81D6080008161A /* CornerRadiusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915651C81D6080008161A /* CornerRadiusUITests.swift */; };
 		9B4915741C81D77D0008161A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915731C81D77D0008161A /* CustomTableViewCell.swift */; };
+		9BADBA5E1C82B1B3000DB0E2 /* KtCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADBA5D1C82B1B3000DB0E2 /* KtCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9B4915651C81D6080008161A /* CornerRadiusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusUITests.swift; sourceTree = "<group>"; };
 		9B4915671C81D6080008161A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4915731C81D77D0008161A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		9BADBA5D1C82B1B3000DB0E2 /* KtCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KtCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9B4915451C81D6080008161A /* AppDelegate.swift */,
 				9B4915471C81D6080008161A /* ViewController.swift */,
 				9B4915731C81D77D0008161A /* CustomTableViewCell.swift */,
+				9BADBA5D1C82B1B3000DB0E2 /* KtCorner.swift */,
 				9B4915491C81D6080008161A /* Main.storyboard */,
 				9B49154C1C81D6080008161A /* Assets.xcassets */,
 				9B49154E1C81D6080008161A /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4915741C81D77D0008161A /* CustomTableViewCell.swift in Sources */,
+				9BADBA5E1C82B1B3000DB0E2 /* KtCorner.swift in Sources */,
 				9B4915481C81D6080008161A /* ViewController.swift in Sources */,
 				9B4915461C81D6080008161A /* AppDelegate.swift in Sources */,
 			);
@@ -489,6 +493,7 @@
 				9B49156C1C81D6080008161A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B49156D1C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				9B49156F1C81D6080008161A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B4915701C81D6080008161A /* Build configuration list for PBXNativeTarget "CornerRadiusUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				9B4915721C81D6080008161A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

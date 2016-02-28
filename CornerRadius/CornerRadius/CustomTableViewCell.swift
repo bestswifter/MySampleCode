@@ -10,30 +10,27 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    let imgView1 = UIImageView(frame: CGRectMake(20, 20, 60, 61))
-    let imgView2 = UIImageView(frame: CGRectMake(100, 20, 60, 61))
-    let imgView3 = UIImageView(frame: CGRectMake(180, 20, 60, 61))
-    let imgView4 = UIImageView(frame: CGRectMake(260, 20, 60, 61))
+    let imgView1 = UIImageView(frame: CGRectMake(5, 10, 20, 21))
+    let imgView2 = UIImageView(frame: CGRectMake(55, 10, 20, 21))
+    let view = UIView(frame: CGRectMake(150,10,40,21))
+    let label = UILabel(frame: CGRectMake(250,10,80,21))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        imgView1.layer.cornerRadius = 30
-        imgView1.layer.masksToBounds = true
-        
-        imgView2.layer.cornerRadius = 30
-        imgView2.layer.masksToBounds = true
-        
-        imgView3.layer.cornerRadius = 30
-        imgView3.layer.masksToBounds = true
-        
-        imgView4.layer.cornerRadius = 30
-        imgView4.layer.masksToBounds = true
-        
         self.contentView.addSubview(imgView1)
         self.contentView.addSubview(imgView2)
-        self.contentView.addSubview(imgView3)
-        self.contentView.addSubview(imgView4)
+
+        view.backgroundColor = UIColor.brownColor()
+        view.layer.cornerRadius = 5
+        
+        self.contentView.addSubview(view)
+        
+        
+        label.kt_addCorner(radius: 8)
+//        label.layer.cornerRadius = 5
+        label.text = "123"
+        self.contentView.addSubview(label)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,8 +45,10 @@ class CustomTableViewCell: UITableViewCell {
     func setupContent(imgName imgName: String) {
         imgView1.image = UIImage(named: imgName)
         imgView2.image = UIImage(named: imgName)
-        imgView3.image = UIImage(named: imgName)
-        imgView4.image = UIImage(named: "photo")
+        
+        // 下面两行取消注释后试试
+//        imgView1.kt_addCorner(radius: 5)
+//        imgView2.kt_addCorner(radius: 5)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

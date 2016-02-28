@@ -17,6 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.dataSource = self
         
         view.addSubview(table)
+        
+        let imageView = UIImageView(image: UIImage(named: "photo"))
+        imageView.frame = CGRectMake(100, 100, 200, 200)
+        imageView.kt_addCorner(radius: 20)
+//        view.addSubview(imageView)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,17 +38,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell?.selectionStyle = .None
         }
         
-        cell?.setupContent(imgName: String(indexPath.row + 1))
+        cell?.setupContent(imgName: "photo")
         
         return cell!
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200
+        return 40
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 100
     }
 }
 
