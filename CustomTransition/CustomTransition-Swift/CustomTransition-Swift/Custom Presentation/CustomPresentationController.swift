@@ -73,7 +73,7 @@ extension CustomPresentationController {
             }, completion: nil)
     }
     
-    /// present结束时，把dimmingView和wrappingView都清空，这些临时视图用不到了
+    /// 如果present没有完成，把dimmingView和wrappingView都清空，这些临时视图用不到了
     override func presentationTransitionDidEnd(completed: Bool) {
         if !completed {
             self.presentationWrappingView = nil
