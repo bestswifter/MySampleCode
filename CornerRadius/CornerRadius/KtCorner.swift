@@ -57,25 +57,25 @@ extension UIView {
                                       backgroundColor: UIColor,
                                       borderColor: UIColor) -> UIImage {
         let sizeToFit = CGSize(width: pixel(Double(self.bounds.size.width)), height: Double(self.bounds.size.height))
-        let halfBorderWidth = CGFloat(borderWidth / 2.0);
+        let halfBorderWidth = CGFloat(borderWidth / 2.0)
         
         UIGraphicsBeginImageContextWithOptions(sizeToFit, false, UIScreen.mainScreen().scale)
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetLineWidth(context, borderWidth);
-        CGContextSetStrokeColorWithColor(context, borderColor.CGColor);
-        CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
+        CGContextSetLineWidth(context, borderWidth)
+        CGContextSetStrokeColorWithColor(context, borderColor.CGColor)
+        CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         
         let width = sizeToFit.width, height = sizeToFit.height
-        CGContextMoveToPoint(context, width - halfBorderWidth, radius + halfBorderWidth);  // 开始坐标右边开始
-        CGContextAddArcToPoint(context, width - halfBorderWidth, height - halfBorderWidth, width - radius - halfBorderWidth, height - halfBorderWidth, radius);  // 右下角角度
-        CGContextAddArcToPoint(context, halfBorderWidth, height - halfBorderWidth, halfBorderWidth, height - radius - halfBorderWidth, radius); // 左下角角度
-        CGContextAddArcToPoint(context, halfBorderWidth, halfBorderWidth, width - halfBorderWidth, halfBorderWidth, radius); // 左上角
-        CGContextAddArcToPoint(context, width - halfBorderWidth, halfBorderWidth, width - halfBorderWidth, radius + halfBorderWidth, radius); // 右上角
+        CGContextMoveToPoint(context, width - halfBorderWidth, radius + halfBorderWidth)  // 开始坐标右边开始
+        CGContextAddArcToPoint(context, width - halfBorderWidth, height - halfBorderWidth, width - radius - halfBorderWidth, height - halfBorderWidth, radius)  // 右下角角度
+        CGContextAddArcToPoint(context, halfBorderWidth, height - halfBorderWidth, halfBorderWidth, height - radius - halfBorderWidth, radius) // 左下角角度
+        CGContextAddArcToPoint(context, halfBorderWidth, halfBorderWidth, width - halfBorderWidth, halfBorderWidth, radius) // 左上角
+        CGContextAddArcToPoint(context, width - halfBorderWidth, halfBorderWidth, width - halfBorderWidth, radius + halfBorderWidth, radius) // 右上角
         
         CGContextDrawPath(UIGraphicsGetCurrentContext(), .FillStroke)
-        let output = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        let output = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         return output
     }
 }
@@ -87,6 +87,8 @@ extension UIImageView {
      :param: radius 圆角半径
      */
     override func kt_addCorner(radius radius: CGFloat) {
+        // 被注释的是图片添加圆角的 OC 写法
+//        self.image = self.image?.imageAddCornerWithRadius(radius, andSize: self.bounds.size)
         self.image = self.image?.kt_drawRectWithRoundedCorner(radius: radius, self.bounds.size)
     }
 }
@@ -103,8 +105,8 @@ extension UIImage {
         
         self.drawInRect(rect)
         CGContextDrawPath(UIGraphicsGetCurrentContext(), .FillStroke)
-        let output = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        let output = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
         return output
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F9F6D1C87E5440019AACD /* UIImage+ImageRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F9F6C1C87E5440019AACD /* UIImage+ImageRoundedCorner.m */; };
 		9B4915461C81D6080008161A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915451C81D6080008161A /* AppDelegate.swift */; };
 		9B4915481C81D6080008161A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4915471C81D6080008161A /* ViewController.swift */; };
 		9B49154B1C81D6080008161A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4915491C81D6080008161A /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1F9F6A1C87E5430019AACD /* CornerRadius-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CornerRadius-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B1F9F6B1C87E5440019AACD /* UIImage+ImageRoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageRoundedCorner.h"; sourceTree = "<group>"; };
+		9B1F9F6C1C87E5440019AACD /* UIImage+ImageRoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageRoundedCorner.m"; sourceTree = "<group>"; };
 		9B4915421C81D6080008161A /* CornerRadius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornerRadius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4915451C81D6080008161A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4915471C81D6080008161A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +109,13 @@
 				9B4915471C81D6080008161A /* ViewController.swift */,
 				9B4915731C81D77D0008161A /* CustomTableViewCell.swift */,
 				9BADBA5D1C82B1B3000DB0E2 /* KtCorner.swift */,
+				9B1F9F6B1C87E5440019AACD /* UIImage+ImageRoundedCorner.h */,
+				9B1F9F6C1C87E5440019AACD /* UIImage+ImageRoundedCorner.m */,
 				9B4915491C81D6080008161A /* Main.storyboard */,
 				9B49154C1C81D6080008161A /* Assets.xcassets */,
 				9B49154E1C81D6080008161A /* LaunchScreen.storyboard */,
 				9B4915511C81D6080008161A /* Info.plist */,
+				9B1F9F6A1C87E5430019AACD /* CornerRadius-Bridging-Header.h */,
 			);
 			path = CornerRadius;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 				9BADBA5E1C82B1B3000DB0E2 /* KtCorner.swift in Sources */,
 				9B4915481C81D6080008161A /* ViewController.swift in Sources */,
 				9B4915461C81D6080008161A /* AppDelegate.swift in Sources */,
+				9B1F9F6D1C87E5440019AACD /* UIImage+ImageRoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CornerRadius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CornerRadius/CornerRadius-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -419,10 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CornerRadius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NEU.CornerRadius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CornerRadius/CornerRadius-Bridging-Header.h";
 			};
 			name = Release;
 		};
