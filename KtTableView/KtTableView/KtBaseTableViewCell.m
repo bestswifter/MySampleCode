@@ -1,0 +1,43 @@
+//
+//  KtBaseTableViewCell.m
+//  KtTableView
+//
+//  Created by baidu on 16/4/13.
+//  Copyright © 2016年 zxy. All rights reserved.
+//
+
+#import "KtBaseTableViewCell.h"
+#import "KtTableViewBaseItem.h"
+#import "UIView+KtExtension.h"
+
+@implementation KtBaseTableViewCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+- (void)setObject:(KtTableViewBaseItem *)object { // 子类在这个方法中解析数据
+    self.height = [[self class] tableView:nil rowHeightForObject:object];
+    self.width = [[UIScreen mainScreen] bounds].size.width;
+    
+    self.contentView.height = self.height;
+    self.contentView.width = self.width;
+    
+    self.imageView.image = object.itemImage;
+    self.textLabel.text = object.itemTitle;
+    self.detailTextLabel.text = object.itemSubtitle;
+    self.accessoryView = [[UIImageView alloc] initWithImage:object.itemAccessoryImage];
+}
+
++ (CGFloat)tableView:(UITableView*)tableView rowHeightForObject:(KtTableViewBaseItem *)object {
+    return 44.0f;
+}
+
+@end
