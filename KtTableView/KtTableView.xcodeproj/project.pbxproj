@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E108B2A71CBE0A2600191E0B /* KtMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2A61CBE0A2600191E0B /* KtMainTableViewCell.m */; };
+		E108B2AB1CBE14C300191E0B /* KtTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2AA1CBE14C300191E0B /* KtTableViewDataSource.m */; };
+		E108B2AE1CBE15D800191E0B /* KtTableViewSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2AD1CBE15D800191E0B /* KtTableViewSectionObject.m */; };
+		E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2B01CBE191300191E0B /* KtBaseTableViewCell.m */; };
+		E108B2B41CBE1C9100191E0B /* KtMainTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2B31CBE1C9100191E0B /* KtMainTableViewDataSource.m */; };
+		E108B2B71CBE1F6500191E0B /* KtTableViewBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E108B2B61CBE1F6500191E0B /* KtTableViewBaseItem.m */; };
 		E1621E021CBDF265003D9438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E011CBDF265003D9438 /* main.m */; };
 		E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E041CBDF267003D9438 /* AppDelegate.m */; };
 		E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E071CBDF267003D9438 /* KTMainViewController.m */; };
@@ -16,6 +21,7 @@
 		E1621E101CBDF267003D9438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1621E0E1CBDF267003D9438 /* LaunchScreen.storyboard */; };
 		E1621E1B1CBDF267003D9438 /* KtTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E1A1CBDF267003D9438 /* KtTableViewTests.m */; };
 		E1621E261CBDF267003D9438 /* KtTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E251CBDF267003D9438 /* KtTableViewUITests.m */; };
+		E1EE5C9A1CBE791E0095688B /* UIView+KtExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C991CBE791E0095688B /* UIView+KtExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,16 @@
 /* Begin PBXFileReference section */
 		E108B2A51CBE0A2600191E0B /* KtMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtMainTableViewCell.h; sourceTree = "<group>"; };
 		E108B2A61CBE0A2600191E0B /* KtMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtMainTableViewCell.m; sourceTree = "<group>"; };
+		E108B2A91CBE14C300191E0B /* KtTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtTableViewDataSource.h; sourceTree = "<group>"; };
+		E108B2AA1CBE14C300191E0B /* KtTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtTableViewDataSource.m; sourceTree = "<group>"; };
+		E108B2AC1CBE15D800191E0B /* KtTableViewSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtTableViewSectionObject.h; sourceTree = "<group>"; };
+		E108B2AD1CBE15D800191E0B /* KtTableViewSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtTableViewSectionObject.m; sourceTree = "<group>"; };
+		E108B2AF1CBE191300191E0B /* KtBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseTableViewCell.h; sourceTree = "<group>"; };
+		E108B2B01CBE191300191E0B /* KtBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseTableViewCell.m; sourceTree = "<group>"; };
+		E108B2B21CBE1C9100191E0B /* KtMainTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtMainTableViewDataSource.h; sourceTree = "<group>"; };
+		E108B2B31CBE1C9100191E0B /* KtMainTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtMainTableViewDataSource.m; sourceTree = "<group>"; };
+		E108B2B51CBE1F6500191E0B /* KtTableViewBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtTableViewBaseItem.h; sourceTree = "<group>"; };
+		E108B2B61CBE1F6500191E0B /* KtTableViewBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtTableViewBaseItem.m; sourceTree = "<group>"; };
 		E1621DFD1CBDF265003D9438 /* KtTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KtTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1621E011CBDF265003D9438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1621E031CBDF267003D9438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +70,8 @@
 		E1621E211CBDF267003D9438 /* KtTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KtTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1621E251CBDF267003D9438 /* KtTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KtTableViewUITests.m; sourceTree = "<group>"; };
 		E1621E271CBDF267003D9438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EE5C981CBE791E0095688B /* UIView+KtExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KtExtension.h"; sourceTree = "<group>"; };
+		E1EE5C991CBE791E0095688B /* UIView+KtExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KtExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E108B2A81CBE148200191E0B /* KtBaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E108B2A91CBE14C300191E0B /* KtTableViewDataSource.h */,
+				E108B2AA1CBE14C300191E0B /* KtTableViewDataSource.m */,
+				E108B2AF1CBE191300191E0B /* KtBaseTableViewCell.h */,
+				E108B2B01CBE191300191E0B /* KtBaseTableViewCell.m */,
+				E108B2AC1CBE15D800191E0B /* KtTableViewSectionObject.h */,
+				E108B2AD1CBE15D800191E0B /* KtTableViewSectionObject.m */,
+				E108B2B51CBE1F6500191E0B /* KtTableViewBaseItem.h */,
+				E108B2B61CBE1F6500191E0B /* KtTableViewBaseItem.m */,
+			);
+			name = KtBaseTableViewController;
+			sourceTree = "<group>";
+		};
 		E1621DF41CBDF265003D9438 = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +137,14 @@
 		E1621DFF1CBDF265003D9438 /* KtTableView */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE5C961CBE78BD0095688B /* KtExtension */,
+				E108B2A81CBE148200191E0B /* KtBaseTableViewController */,
 				E1621E031CBDF267003D9438 /* AppDelegate.h */,
 				E1621E041CBDF267003D9438 /* AppDelegate.m */,
 				E1621E061CBDF267003D9438 /* KTMainViewController.h */,
 				E1621E071CBDF267003D9438 /* KTMainViewController.m */,
+				E108B2B21CBE1C9100191E0B /* KtMainTableViewDataSource.h */,
+				E108B2B31CBE1C9100191E0B /* KtMainTableViewDataSource.m */,
 				E108B2A51CBE0A2600191E0B /* KtMainTableViewCell.h */,
 				E108B2A61CBE0A2600191E0B /* KtMainTableViewCell.m */,
 				E1621E091CBDF267003D9438 /* Main.storyboard */,
@@ -143,6 +180,15 @@
 				E1621E271CBDF267003D9438 /* Info.plist */,
 			);
 			path = KtTableViewUITests;
+			sourceTree = "<group>";
+		};
+		E1EE5C961CBE78BD0095688B /* KtExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E1EE5C981CBE791E0095688B /* UIView+KtExtension.h */,
+				E1EE5C991CBE791E0095688B /* UIView+KtExtension.m */,
+			);
+			name = KtExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E108B2B41CBE1C9100191E0B /* KtMainTableViewDataSource.m in Sources */,
+				E108B2AB1CBE14C300191E0B /* KtTableViewDataSource.m in Sources */,
+				E108B2B71CBE1F6500191E0B /* KtTableViewBaseItem.m in Sources */,
+				E1EE5C9A1CBE791E0095688B /* UIView+KtExtension.m in Sources */,
+				E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */,
 				E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */,
 				E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */,
+				E108B2AE1CBE15D800191E0B /* KtTableViewSectionObject.m in Sources */,
 				E1621E021CBDF265003D9438 /* main.m in Sources */,
 				E108B2A71CBE0A2600191E0B /* KtMainTableViewCell.m in Sources */,
 			);
