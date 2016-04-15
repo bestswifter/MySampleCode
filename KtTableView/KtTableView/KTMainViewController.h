@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KtBaseTableView.h"
 
 @interface KTMainViewController : UIViewController
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) KtBaseTableView *tableView;
 
 @end
 
