@@ -22,6 +22,7 @@
 		E1621E1B1CBDF267003D9438 /* KtTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E1A1CBDF267003D9438 /* KtTableViewTests.m */; };
 		E1621E261CBDF267003D9438 /* KtTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E251CBDF267003D9438 /* KtTableViewUITests.m */; };
 		E1EE5C9A1CBE791E0095688B /* UIView+KtExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C991CBE791E0095688B /* UIView+KtExtension.m */; };
+		E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		E1621E271CBDF267003D9438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1EE5C981CBE791E0095688B /* UIView+KtExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KtExtension.h"; sourceTree = "<group>"; };
 		E1EE5C991CBE791E0095688B /* UIView+KtExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KtExtension.m"; sourceTree = "<group>"; };
+		E1EE5C9B1CBE811C0095688B /* KtBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseTableView.h; sourceTree = "<group>"; };
+		E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				E108B2AD1CBE15D800191E0B /* KtTableViewSectionObject.m */,
 				E108B2B51CBE1F6500191E0B /* KtTableViewBaseItem.h */,
 				E108B2B61CBE1F6500191E0B /* KtTableViewBaseItem.m */,
+				E1EE5C9B1CBE811C0095688B /* KtBaseTableView.h */,
+				E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */,
 			);
 			name = KtBaseTableViewController;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				E1EE5C9A1CBE791E0095688B /* UIView+KtExtension.m in Sources */,
 				E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */,
 				E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */,
+				E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */,
 				E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */,
 				E108B2AE1CBE15D800191E0B /* KtTableViewSectionObject.m in Sources */,
 				E1621E021CBDF265003D9438 /* main.m in Sources */,
