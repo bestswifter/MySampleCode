@@ -8,10 +8,12 @@
 
 #import "KTMainViewController.h"
 #import "KtMainTableViewCell.h"
+#import "KtMainTableViewDataSource.h"
 
-@interface KTMainViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface KTMainViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *items;
+@property (strong, nonatomic) KtMainTableViewDataSource *dataSource;
 
 @end
 
@@ -26,25 +28,12 @@
     [self.view addSubview:self.tableView];
     
     self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    
+    self.dataSource = [[KtMainTableViewDataSource alloc] init]; // 这一步创建了数据源
+    self.tableView.dataSource = self.dataSource;  // 绑定了数据源
     self.tableView.tableFooterView = [[UIView alloc] init]; // 去掉多余分割线
     
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-#pragma mark - UITableViewDataSource
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"KtMainTableViewCell";
-    [self.tableView registerClass:[KtMainTableViewCell class] forCellReuseIdentifier:identifier];
-    
-    KtMainTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath]; // 会调用到 initWithStyle:reuseIdentifier: 方法
-    cell.textLabel.text = [self.items objectAtIndex:[indexPath row]];
-    
-    return cell;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items.count;
 }
 
 - (void)didReceiveMemoryWarning {

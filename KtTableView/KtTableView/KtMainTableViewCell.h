@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KtBaseTableViewCell.h"
 
-@interface KtMainTableViewCell : UITableViewCell
+@interface KtMainTableViewCell : KtBaseTableViewCell
 
 @end
