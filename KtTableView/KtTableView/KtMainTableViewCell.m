@@ -21,4 +21,8 @@
     // Configure the view for the selected state
 }
 
++ (CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(KtTableViewBaseItem *)object {
+    return 60;
+}
+
 @end

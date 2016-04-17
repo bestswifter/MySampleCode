@@ -21,7 +21,9 @@
 
 // 这个方法实际上要被子类重写，生成对应类型的 data source
 - (void)createDataSource {
-    self.dataSource = [[KtTableViewDataSource alloc] init];
+    @throw [NSException exceptionWithName:@"Cann't use this method"
+                                   reason:@"You can only call this method in subclass"
+                                 userInfo:nil];
 }
 
 - (void)viewDidLoad {
