@@ -9,6 +9,7 @@
 #import "KtBaseTableView.h"
 #import "KtBaseTableViewCell.h"
 #import "KtTableViewSectionObject.h"
+#import "KtTableViewBaseItem.h"
 
 @implementation KtBaseTableView
 
@@ -40,8 +41,11 @@
     
     KtTableViewBaseItem *object = [dataSource tableView:tableView objectForRowAtIndexPath:indexPath];
     Class cls = [dataSource tableView:tableView cellClassForObject:object];
-    
-    return [cls tableView:tableView rowHeightForObject:object];
+
+    if (object.cellHeight == CellInvalidHeight) { // 没有高度缓存
+        object.cellHeight = [cls tableView:tableView rowHeightForObject:object];
+    }
+    return object.cellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -19,12 +19,21 @@
     self = [super init];
     if (self) {
         KtTableViewSectionObject *firstSectionObject = [[KtTableViewSectionObject alloc] initWithItemArray:[NSMutableArray arrayWithObjects:
-                                                                                                 [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第一条消息" SubTitle:nil AccessoryImage:nil],
-                                                                                                 [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第二条消息" SubTitle:nil AccessoryImage:nil],
-                                                                                                 [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第三条消息" SubTitle:nil AccessoryImage:nil],
-                                                                                                 [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第四条消息" SubTitle:nil AccessoryImage:nil],
-                                                                                                 [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第五条消息" SubTitle:nil AccessoryImage:nil],
-                                                                                                  nil]];
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第一条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第二条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第三条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第四条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第五条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第六条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第七条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第八条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第九条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第十条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第十一条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第十二条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第十三条消息" SubTitle:nil AccessoryImage:nil],
+                        [[KtTableViewBaseItem alloc] initWithImage:nil Title:@"第十四条消息" SubTitle:nil AccessoryImage:nil],
+        nil]];
         self.sections = [NSMutableArray arrayWithObject: firstSectionObject];
     }
     return self;

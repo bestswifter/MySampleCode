@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+FOUNDATION_EXPORT CGFloat const CellInvalidHeight;
+
 @interface KtTableViewBaseItem : NSObject
+
+@property (nonatomic, assign) CGFloat cellHeight;
 
 @property (nonatomic, retain) NSString *itemIdentifier;
 @property (nonatomic, retain) UIImage *itemImage;

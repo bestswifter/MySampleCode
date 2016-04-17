@@ -8,11 +8,14 @@
 
 #import "KtTableViewBaseItem.h"
 
+CGFloat const CellInvalidHeight = -1;
+
 @implementation KtTableViewBaseItem
 
 - (instancetype)initWithImage:(UIImage *)image Title:(NSString *)title SubTitle:(NSString *)subTitle AccessoryImage:(UIImage *)accessoryImage {
     self = [super init];
     if (self) {
+        _cellHeight = CellInvalidHeight;
         _itemImage = image;
         _itemTitle = title;
         _itemSubtitle = subTitle;

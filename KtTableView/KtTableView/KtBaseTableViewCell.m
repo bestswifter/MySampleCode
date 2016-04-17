@@ -24,12 +24,6 @@
 }
 
 - (void)setObject:(KtTableViewBaseItem *)object { // 子类在这个方法中解析数据
-    self.height = [[self class] tableView:nil rowHeightForObject:object];
-    self.width = [[UIScreen mainScreen] bounds].size.width;
-    
-    self.contentView.height = self.height;
-    self.contentView.width = self.width;
-    
     self.imageView.image = object.itemImage;
     self.textLabel.text = object.itemTitle;
     self.detailTextLabel.text = object.itemSubtitle;
