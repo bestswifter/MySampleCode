@@ -24,4 +24,6 @@
 
 @property (nonatomic, strong) NSMutableArray *sections;  // 二维数组，每个元素都是一个 SectionObject
 
+- (void)appendItem:(KtTableViewBaseItem *)item;
+
 @end

@@ -30,6 +30,11 @@
     return [KtBaseTableViewCell class];
 }
 
+- (void)appendItem:(KtTableViewBaseItem *)item {
+    KtTableViewSectionObject *firstSectionObject = [self.sections objectAtIndex:0];
+    [firstSectionObject.items addObject:item];
+}
+
 #pragma mark - UITableViewDataSource Required
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.sections.count > section) {
