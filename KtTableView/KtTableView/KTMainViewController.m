@@ -14,6 +14,8 @@
 #import "KtTableViewBaseItem.h"
 #import "KtMainTableModel.h"
 
+#import "MJRefresh.h"
+
 @interface KTMainViewController ()
 
 @property (strong, nonatomic) KtMainTableModel *model;
@@ -25,7 +27,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createModel];
-    [self getFirstPage];
+//    [self getFirstPage];
+    __weak typeof(self) wSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [wSelf getFirstPage];
+    }];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [wSelf getFirstPage];
+    }];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,6 +70,12 @@
         [self.dataSource appendItem:item];
     }
     [self.tableView reloadData];
+    if ([self.tableView.mj_header isRefreshing]) {
+        [self.tableView.mj_header endRefreshing];
+    }
+    if ([self.tableView.mj_footer isRefreshing]) {
+        [self.tableView.mj_footer endRefreshing];
+    }
 }
 
 @end
