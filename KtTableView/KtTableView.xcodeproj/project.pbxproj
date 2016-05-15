@@ -25,6 +25,7 @@
 		E1621E1B1CBDF267003D9438 /* KtTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E1A1CBDF267003D9438 /* KtTableViewTests.m */; };
 		E1621E261CBDF267003D9438 /* KtTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1621E251CBDF267003D9438 /* KtTableViewUITests.m */; };
 		E19B41191CC21555008A3E7F /* KtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19B41181CC21555008A3E7F /* KtTableViewController.m */; };
+		E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */; };
 		E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		E1621E271CBDF267003D9438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19B41171CC21555008A3E7F /* KtTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtTableViewController.h; sourceTree = "<group>"; };
 		E19B41181CC21555008A3E7F /* KtTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtTableViewController.m; sourceTree = "<group>"; };
+		E1DCC9F01CE5A6A000CDC83D /* KtBaseServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseServerAPI.h; sourceTree = "<group>"; };
+		E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseServerAPI.m; sourceTree = "<group>"; };
 		E1EE5C9B1CBE811C0095688B /* KtBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseTableView.h; sourceTree = "<group>"; };
 		E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,8 +225,13 @@
 			path = KtTableViewUITests;
 			sourceTree = "<group>";
 		};
+		E1DCC9EC1CE5A5FA00CDC83D /* KtBaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1DCC9F01CE5A6A000CDC83D /* KtBaseServerAPI.h */,
+				E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */,
+			);
+			path = KtBaseModel;
 			sourceTree = "<group>";
 		};
 		F71B31402A7F180F563A44F9 /* Frameworks */ = {
@@ -422,6 +430,7 @@
 				E108B2AB1CBE14C300191E0B /* KtTableViewDataSource.m in Sources */,
 				E108B2B71CBE1F6500191E0B /* KtTableViewBaseItem.m in Sources */,
 				E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */,
+				E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */,
 				E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */,
 				E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */,
 				E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */,
