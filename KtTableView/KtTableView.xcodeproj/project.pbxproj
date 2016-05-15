@@ -27,7 +27,9 @@
 		E19B41191CC21555008A3E7F /* KtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19B41181CC21555008A3E7F /* KtTableViewController.m */; };
 		E1DCC9EF1CE5A61A00CDC83D /* KtBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9EE1CE5A61A00CDC83D /* KtBaseModel.m */; };
 		E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */; };
+		E1DCC9F51CE5A76D00CDC83D /* KtMainTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9F41CE5A76D00CDC83D /* KtMainTableModel.m */; };
 		E1DCC9F81CE5A81000CDC83D /* KtBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9F71CE5A81000CDC83D /* KtBaseItem.m */; };
+		E1DCC9FB1CE5A99C00CDC83D /* KtMainTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9FA1CE5A99C00CDC83D /* KtMainTableItem.m */; };
 		E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */; };
 /* End PBXBuildFile section */
 
@@ -90,8 +92,12 @@
 		E1DCC9EE1CE5A61A00CDC83D /* KtBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseModel.m; sourceTree = "<group>"; };
 		E1DCC9F01CE5A6A000CDC83D /* KtBaseServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseServerAPI.h; sourceTree = "<group>"; };
 		E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseServerAPI.m; sourceTree = "<group>"; };
+		E1DCC9F31CE5A76D00CDC83D /* KtMainTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtMainTableModel.h; sourceTree = "<group>"; };
+		E1DCC9F41CE5A76D00CDC83D /* KtMainTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtMainTableModel.m; sourceTree = "<group>"; };
 		E1DCC9F61CE5A81000CDC83D /* KtBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseItem.h; sourceTree = "<group>"; };
 		E1DCC9F71CE5A81000CDC83D /* KtBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseItem.m; sourceTree = "<group>"; };
+		E1DCC9F91CE5A99C00CDC83D /* KtMainTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtMainTableItem.h; sourceTree = "<group>"; };
+		E1DCC9FA1CE5A99C00CDC83D /* KtMainTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtMainTableItem.m; sourceTree = "<group>"; };
 		E1EE5C9B1CBE811C0095688B /* KtBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseTableView.h; sourceTree = "<group>"; };
 		E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +199,10 @@
 				E1621E041CBDF267003D9438 /* AppDelegate.m */,
 				E1621E061CBDF267003D9438 /* KTMainViewController.h */,
 				E1621E071CBDF267003D9438 /* KTMainViewController.m */,
+				E1DCC9F31CE5A76D00CDC83D /* KtMainTableModel.h */,
+				E1DCC9F41CE5A76D00CDC83D /* KtMainTableModel.m */,
+				E1DCC9F91CE5A99C00CDC83D /* KtMainTableItem.h */,
+				E1DCC9FA1CE5A99C00CDC83D /* KtMainTableItem.m */,
 				E108B2B21CBE1C9100191E0B /* KtMainTableViewDataSource.h */,
 				E108B2B31CBE1C9100191E0B /* KtMainTableViewDataSource.m */,
 				E108B2A51CBE0A2600191E0B /* KtMainTableViewCell.h */,
@@ -445,9 +455,11 @@
 				E1DCC9EF1CE5A61A00CDC83D /* KtBaseModel.m in Sources */,
 				E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */,
 				E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */,
+				E1DCC9FB1CE5A99C00CDC83D /* KtMainTableItem.m in Sources */,
 				E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */,
 				E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */,
 				E108B2AE1CBE15D800191E0B /* KtTableViewSectionObject.m in Sources */,
+				E1DCC9F51CE5A76D00CDC83D /* KtMainTableModel.m in Sources */,
 				E1621E021CBDF265003D9438 /* main.m in Sources */,
 				E108B2A71CBE0A2600191E0B /* KtMainTableViewCell.m in Sources */,
 			);
