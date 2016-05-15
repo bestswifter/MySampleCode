@@ -12,33 +12,30 @@
 
 #import "AFNetworking.h"
 #import "KtTableViewBaseItem.h"
+#import "KtMainTableModel.h"
 
 @interface KTMainViewController ()
 
+@property (strong, nonatomic) KtMainTableModel *model;
 
 @end
-
-static NSString * const BaseURLString = @"http://1.footballapp.sinaapp.com/mooclist.php";
 
 @implementation KTMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *parameters = @{@"nextPage": @"0"};
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    NSURLSessionDataTask *task = [manager GET:BaseURLString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSDictionary *dic = (NSDictionary *)responseObject;
-        NSArray *array = dic[@"data"];
-        for (NSDictionary *dict in array) {
-            KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] initWithImage:nil Title:dict[@"title"] SubTitle:nil AccessoryImage:nil];
-            [self.dataSource appendItem:item];
-        }
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+    [self createModel];
+    [self getFirstPage];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)createModel {
+    self.model = [[KtMainTableModel alloc] initWithAddress:@"/mooclist.php"];
+    __weak typeof(self) wSelf = self;
+    [self.model setCompletionBlock:^(KtBaseModel *model){
+        __strong typeof(self) sSelf = wSelf;
+        [sSelf requestBooksSuccess];
+    }];
 }
 
 - (void)createDataSource {
@@ -48,6 +45,20 @@ static NSString * const BaseURLString = @"http://1.footballapp.sinaapp.com/moocl
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getFirstPage {
+    self.model.params = @{@"nextPage": @0};
+    [self.model loadWithShortConnection];
+}
+
+- (void)requestBooksSuccess {
+    for (KtMainTableBookItem *book in self.model.tableViewItem.books) {
+        KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] init];
+        item.itemTitle = book.bookTitle;
+        [self.dataSource appendItem:item];
+    }
+    [self.tableView reloadData];
 }
 
 @end

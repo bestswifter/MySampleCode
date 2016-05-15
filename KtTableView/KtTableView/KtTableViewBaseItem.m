@@ -12,6 +12,11 @@ CGFloat const CellInvalidHeight = -1;
 
 @implementation KtTableViewBaseItem
 
+- (instancetype)init {
+    self = [self initWithImage:nil Title:nil SubTitle:nil AccessoryImage:nil];
+    return self;
+}
+
 - (instancetype)initWithImage:(UIImage *)image Title:(NSString *)title SubTitle:(NSString *)subTitle AccessoryImage:(UIImage *)accessoryImage {
     self = [super init];
     if (self) {
