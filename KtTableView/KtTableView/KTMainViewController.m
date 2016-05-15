@@ -27,16 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createModel];
-//    [self getFirstPage];
-    __weak typeof(self) wSelf = self;
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [wSelf getFirstPage];
-    }];
     
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [wSelf getFirstPage];
-    }];
-    
+    self.tableView.isNeedPullUpToRefreshAction = YES;
+    self.tableView.isNeedPullDownToRefreshAction = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -58,6 +51,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)pullUpToRefreshAction {
+    [self getFirstPage];
+}
+
+- (void)pullDownToRefreshAction {
+    [self getFirstPage];
+}
+
 - (void)getFirstPage {
     self.model.params = @{@"nextPage": @0};
     [self.model loadWithShortConnection];
@@ -70,12 +71,7 @@
         [self.dataSource appendItem:item];
     }
     [self.tableView reloadData];
-    if ([self.tableView.mj_header isRefreshing]) {
-        [self.tableView.mj_header endRefreshing];
-    }
-    if ([self.tableView.mj_footer isRefreshing]) {
-        [self.tableView.mj_footer endRefreshing];
-    }
+    [self.tableView stopRefreshingAnimation];
 }
 
 @end

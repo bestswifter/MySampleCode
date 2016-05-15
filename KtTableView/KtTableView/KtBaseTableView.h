@@ -21,6 +21,14 @@
 
 - (UIView *)headerViewForSectionObject:(KtTableViewSectionObject *)sectionObject atSection:(NSInteger)section;
 
+// 下拉刷新触发的方法
+
+- (void)pullDownToRefreshAction;
+
+// 上拉加载触发的方法
+ 
+- (void)pullUpToRefreshAction;
+
 // 将来可以有 cell 的编辑，交换，左滑等回调
 
 // 这个协议继承了UITableViewDelegate ，所以自己做一层中转，VC 依然需要实现某些代理方法。
@@ -32,5 +40,12 @@
 @property (nonatomic, assign) id<KtTableViewDataSource> ktDataSource;
 
 @property (nonatomic, assign) id<KtTableViewDelegate> ktDelegate;
+
+// 是否需要下拉刷新和上拉加载
+@property (nonatomic, assign) BOOL isNeedPullDownToRefreshAction;
+@property (nonatomic, assign) BOOL isNeedPullUpToRefreshAction;
+
+- (void)stopRefreshingAnimation;
+- (void)triggerRefreshing;
 
 @end

@@ -10,6 +10,7 @@
 #import "KtBaseTableViewCell.h"
 #import "KtTableViewSectionObject.h"
 #import "KtTableViewBaseItem.h"
+#import "MJRefresh.h"
 
 @implementation KtBaseTableView
 
@@ -23,6 +24,8 @@
         self.sectionHeaderHeight = 0;
         self.sectionFooterHeight = 0;
         self.delegate = self;
+        self.isNeedPullDownToRefreshAction = NO;
+        self.isNeedPullUpToRefreshAction = NO;
     }
     return self;
 }
@@ -32,6 +35,52 @@
         _ktDataSource = ktDataSource;
         self.dataSource = ktDataSource;
     }
+}
+
+#pragma mark - 上拉加载和下拉刷新
+- (void)setIsNeedPullDownToRefreshAction:(BOOL)isEnable {
+    if (_isNeedPullDownToRefreshAction == isEnable) {
+        return;
+    }
+    _isNeedPullDownToRefreshAction = isEnable;
+    __block typeof(self) weakSelf = self;
+    if (_isNeedPullDownToRefreshAction) {
+        self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            if ([weakSelf.ktDelegate respondsToSelector:@selector(pullDownToRefreshAction)]) {
+                [weakSelf.ktDelegate pullDownToRefreshAction];
+            }
+        }];
+        
+    }
+}
+
+- (void)setIsNeedPullUpToRefreshAction:(BOOL)isEnable
+{
+    if (_isNeedPullUpToRefreshAction == isEnable) {
+        return;
+    }
+    _isNeedPullUpToRefreshAction = isEnable;
+    __block typeof(self) weakSelf = self;
+    if (_isNeedPullUpToRefreshAction) {
+        self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            if ([weakSelf.ktDelegate respondsToSelector:@selector(pullUpToRefreshAction)]) {
+                [weakSelf.ktDelegate pullUpToRefreshAction];
+            }
+        }];
+    }
+}
+
+- (void)stopRefreshingAnimation {
+    if ([self.mj_header isRefreshing]) {
+        [self.mj_header endRefreshing];
+    }
+    if ([self.mj_footer isRefreshing]) {
+        [self.mj_footer endRefreshing];
+    }
+}
+
+- (void)triggerRefreshing {
+    [self.mj_header beginRefreshing];
 }
 
 #pragma mark - UITableViewDelegate
