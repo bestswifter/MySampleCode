@@ -31,6 +31,8 @@
 		E1DCC9F81CE5A81000CDC83D /* KtBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9F71CE5A81000CDC83D /* KtBaseItem.m */; };
 		E1DCC9FB1CE5A99C00CDC83D /* KtMainTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCC9FA1CE5A99C00CDC83D /* KtMainTableItem.m */; };
 		E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */; };
+		E1F64E7E1CECB048005800E4 /* KtBaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */; };
+		E1F64E811CECB067005800E4 /* KtBaseListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F64E801CECB067005800E4 /* KtBaseListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		E1DCC9FA1CE5A99C00CDC83D /* KtMainTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtMainTableItem.m; sourceTree = "<group>"; };
 		E1EE5C9B1CBE811C0095688B /* KtBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseTableView.h; sourceTree = "<group>"; };
 		E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseTableView.m; sourceTree = "<group>"; };
+		E1F64E7C1CECB048005800E4 /* KtBaseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseListModel.h; sourceTree = "<group>"; };
+		E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseListModel.m; sourceTree = "<group>"; };
+		E1F64E7F1CECB067005800E4 /* KtBaseListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseListItem.h; sourceTree = "<group>"; };
+		E1F64E801CECB067005800E4 /* KtBaseListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,7 @@
 		E1DCC9EC1CE5A5FA00CDC83D /* KtBaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1F64E7B1CECB02E005800E4 /* KtBaseListModel */,
 				E1DCC9ED1CE5A61A00CDC83D /* KtBaseModel.h */,
 				E1DCC9EE1CE5A61A00CDC83D /* KtBaseModel.m */,
 				E1DCC9F61CE5A81000CDC83D /* KtBaseItem.h */,
@@ -253,6 +260,17 @@
 				E1DCC9F11CE5A6A000CDC83D /* KtBaseServerAPI.m */,
 			);
 			path = KtBaseModel;
+			sourceTree = "<group>";
+		};
+		E1F64E7B1CECB02E005800E4 /* KtBaseListModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1F64E7F1CECB067005800E4 /* KtBaseListItem.h */,
+				E1F64E801CECB067005800E4 /* KtBaseListItem.m */,
+				E1F64E7C1CECB048005800E4 /* KtBaseListModel.h */,
+				E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */,
+			);
+			path = KtBaseListModel;
 			sourceTree = "<group>";
 		};
 		F71B31402A7F180F563A44F9 /* Frameworks */ = {
@@ -452,10 +470,12 @@
 				E108B2AB1CBE14C300191E0B /* KtTableViewDataSource.m in Sources */,
 				E108B2B71CBE1F6500191E0B /* KtTableViewBaseItem.m in Sources */,
 				E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */,
+				E1F64E811CECB067005800E4 /* KtBaseListItem.m in Sources */,
 				E1DCC9EF1CE5A61A00CDC83D /* KtBaseModel.m in Sources */,
 				E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */,
 				E1621E081CBDF267003D9438 /* KTMainViewController.m in Sources */,
 				E1DCC9FB1CE5A99C00CDC83D /* KtMainTableItem.m in Sources */,
+				E1F64E7E1CECB048005800E4 /* KtBaseListModel.m in Sources */,
 				E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */,
 				E1621E051CBDF267003D9438 /* AppDelegate.m in Sources */,
 				E108B2AE1CBE15D800191E0B /* KtTableViewSectionObject.m in Sources */,
