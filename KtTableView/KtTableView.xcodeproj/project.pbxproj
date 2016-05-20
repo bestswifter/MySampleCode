@@ -33,6 +33,7 @@
 		E1EE5C9D1CBE811C0095688B /* KtBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C9C1CBE811C0095688B /* KtBaseTableView.m */; };
 		E1F64E7E1CECB048005800E4 /* KtBaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */; };
 		E1F64E811CECB067005800E4 /* KtBaseListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F64E801CECB067005800E4 /* KtBaseListItem.m */; };
+		E1F64F1B1CEE956E005800E4 /* KtRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F64F1A1CEE956E005800E4 /* KtRefreshTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseListModel.m; sourceTree = "<group>"; };
 		E1F64E7F1CECB067005800E4 /* KtBaseListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtBaseListItem.h; sourceTree = "<group>"; };
 		E1F64E801CECB067005800E4 /* KtBaseListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtBaseListItem.m; sourceTree = "<group>"; };
+		E1F64F191CEE956E005800E4 /* KtRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KtRefreshTableViewController.h; sourceTree = "<group>"; };
+		E1F64F1A1CEE956E005800E4 /* KtRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KtRefreshTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,8 @@
 				E1F64E801CECB067005800E4 /* KtBaseListItem.m */,
 				E1F64E7C1CECB048005800E4 /* KtBaseListModel.h */,
 				E1F64E7D1CECB048005800E4 /* KtBaseListModel.m */,
+				E1F64F191CEE956E005800E4 /* KtRefreshTableViewController.h */,
+				E1F64F1A1CEE956E005800E4 /* KtRefreshTableViewController.m */,
 			);
 			path = KtBaseListModel;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				E108B2AB1CBE14C300191E0B /* KtTableViewDataSource.m in Sources */,
 				E108B2B71CBE1F6500191E0B /* KtTableViewBaseItem.m in Sources */,
 				E108B2B11CBE191300191E0B /* KtBaseTableViewCell.m in Sources */,
+				E1F64F1B1CEE956E005800E4 /* KtRefreshTableViewController.m in Sources */,
 				E1F64E811CECB067005800E4 /* KtBaseListItem.m in Sources */,
 				E1DCC9EF1CE5A61A00CDC83D /* KtBaseModel.m in Sources */,
 				E1DCC9F21CE5A6A000CDC83D /* KtBaseServerAPI.m in Sources */,
