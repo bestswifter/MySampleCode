@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) KtBaseListModel *listModel;
 
+- (void)requestDidSuccess; // 子类请求完成后的处理方法。
+
 @end

@@ -44,23 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)refreshRequestDidSuccess {
-    [super refreshRequestDidSuccess];
+- (void)requestDidSuccess {
     for (KtMainTableBookItem *book in ((KtMainTableModel *)self.listModel).tableViewItem.books) {
         KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] init];
         item.itemTitle = book.bookTitle;
         [self.dataSource appendItem:item];
     }
-}
-
-- (void)loadRequestDidSuccess {
-    [super loadRequestDidSuccess];
-    for (KtMainTableBookItem *book in ((KtMainTableModel *)self.listModel).tableViewItem.books) {
-        KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] init];
-        item.itemTitle = book.bookTitle;
-        [self.dataSource appendItem:item];
-    }
-    
 }
 
 @end

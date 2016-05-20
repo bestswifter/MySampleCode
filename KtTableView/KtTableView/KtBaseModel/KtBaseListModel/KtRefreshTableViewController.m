@@ -20,11 +20,12 @@
 
 #pragma -mark KtBaseListModelProtocol
 - (void)loadRequestDidSuccess {
-    
+    [self requestDidSuccess];
 }
 
 - (void)refreshRequestDidSuccess {
     [self.dataSource clearAllItems];
+    [self requestDidSuccess];
 }
 
 - (void)handleAfterRequestFinish {
