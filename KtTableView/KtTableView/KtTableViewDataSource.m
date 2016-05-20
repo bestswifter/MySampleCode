@@ -30,6 +30,10 @@
     return [KtBaseTableViewCell class];
 }
 
+- (void)clearAllItems {
+    self.sections = [NSMutableArray arrayWithObject:[[KtTableViewSectionObject alloc] init]];
+}
+
 - (void)appendItem:(KtTableViewBaseItem *)item {
     KtTableViewSectionObject *firstSectionObject = [self.sections objectAtIndex:0];
     [firstSectionObject.items addObject:item];

@@ -17,6 +17,8 @@
 // 所有需要映射的property都需要设定此规则
 - (void)addMappingRuleProperty:(NSString*)propertyName pathInJson:(NSString*)path;
 
+- (id)setData:(id)data;
+
 @end
 
 @interface KtClassHelper : NSObject
