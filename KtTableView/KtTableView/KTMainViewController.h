@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KtTableViewController.h"
+#import "KtRefreshTableViewController.h"
 
-@interface KTMainViewController : KtTableViewController
+@interface KTMainViewController : KtRefreshTableViewController
 
 @end
 

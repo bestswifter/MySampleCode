@@ -12,6 +12,7 @@
 @implementation KtMainTableModel
 
 - (void)handleParsedData:(KtBaseItem *)parsedData {
+    [super handleParsedData:parsedData];
     if ([parsedData isKindOfClass:[KtMainTableItem class]]) {
         self.tableViewItem = (KtMainTableItem *)parsedData;
     }

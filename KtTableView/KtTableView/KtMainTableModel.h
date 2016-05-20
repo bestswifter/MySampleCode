@@ -6,10 +6,10 @@
 //  Copyright © 2016年 zxy. All rights reserved.
 //
 
-#import "KtBaseModel.h"
+#import "KtBaseListModel.h"
 #import "KtMainTableItem.h"
 
-@interface KtMainTableModel : KtBaseModel
+@interface KtMainTableModel : KtBaseListModel
 
 @property (nonatomic, strong) KtMainTableItem *tableViewItem;
 

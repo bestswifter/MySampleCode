@@ -6,9 +6,9 @@
 //  Copyright © 2016年 zxy. All rights reserved.
 //
 
-#import "KtBaseItem.h"
+#import "KtBaseListItem.h"
 
-@interface KtMainTableItem : KtBaseItem
+@interface KtMainTableItem : KtBaseListItem
 
 @property (strong, nonatomic) NSMutableArray *books; // 存放了每个 cell 的标题
 

@@ -16,9 +16,9 @@
 
 #import "MJRefresh.h"
 
-@interface KTMainViewController ()
+@interface KTMainViewController ()<KtBaseListModelProtocol>
 
-@property (strong, nonatomic) KtMainTableModel *model;
+//@property (strong, nonatomic) KtMainTableModel *model;
 
 @end
 
@@ -27,19 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createModel];
-    
-    self.tableView.isNeedPullUpToRefreshAction = YES;
-    self.tableView.isNeedPullDownToRefreshAction = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)createModel {
-    self.model = [[KtMainTableModel alloc] initWithAddress:@"/mooclist.php"];
-    __weak typeof(self) wSelf = self;
-    [self.model setCompletionBlock:^(KtBaseModel *model){
-        __strong typeof(self) sSelf = wSelf;
-        [sSelf requestBooksSuccess];
-    }];
+    self.listModel = [[KtMainTableModel alloc] initWithAddress:@"/mooclist.php"];
+    self.listModel.delegate = self;
 }
 
 - (void)createDataSource {
@@ -51,27 +44,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)pullUpToRefreshAction {
-    [self getFirstPage];
-}
-
-- (void)pullDownToRefreshAction {
-    [self getFirstPage];
-}
-
-- (void)getFirstPage {
-    self.model.params = @{@"nextPage": @0};
-    [self.model loadWithShortConnection];
-}
-
-- (void)requestBooksSuccess {
-    for (KtMainTableBookItem *book in self.model.tableViewItem.books) {
+- (void)refreshRequestDidSuccess {
+    [super refreshRequestDidSuccess];
+    for (KtMainTableBookItem *book in ((KtMainTableModel *)self.listModel).tableViewItem.books) {
         KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] init];
         item.itemTitle = book.bookTitle;
         [self.dataSource appendItem:item];
     }
-    [self.tableView reloadData];
-    [self.tableView stopRefreshingAnimation];
+}
+
+- (void)loadRequestDidSuccess {
+    [super loadRequestDidSuccess];
+    for (KtMainTableBookItem *book in ((KtMainTableModel *)self.listModel).tableViewItem.books) {
+        KtTableViewBaseItem *item = [[KtTableViewBaseItem alloc] init];
+        item.itemTitle = book.bookTitle;
+        [self.dataSource appendItem:item];
+    }
+    
 }
 
 @end
