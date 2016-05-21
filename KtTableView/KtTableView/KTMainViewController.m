@@ -16,18 +16,11 @@
 
 #import "MJRefresh.h"
 
-@interface KTMainViewController ()<KtBaseListModelProtocol>
-
-//@property (strong, nonatomic) KtMainTableModel *model;
-
-@end
-
 @implementation KTMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createModel];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)createModel {
@@ -37,11 +30,6 @@
 
 - (void)createDataSource {
     self.dataSource = [[KtMainTableViewDataSource alloc] init]; // 这一步创建了数据源
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)requestDidSuccess {

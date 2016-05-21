@@ -37,7 +37,7 @@
     [self.tableView.mj_footer endRefreshingWithNoMoreData];
 }
 
-#pragma -mark 
+#pragma -mark KtTableViewDelegate
 - (void)pullUpToRefreshAction {
     [self.listModel loadNextPage];
 }
