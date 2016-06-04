@@ -49,7 +49,7 @@ typedef void(^KtServerAPICompletionBlock)(KtBaseServerAPI *);
 @property (nonatomic, retain) NSError *error; // code为IDPErrorEnum类型，服务器返回存放在userInfo的errno和errmsg里
 @property (nonatomic, retain) NSDictionary *jsonData;   // 解析出的JSON
 @property (nonatomic, retain) NSData *rawData;          // 原始data，用于二进制结果
-@property (nonatomic, readonly) NSString *rawString;    // 原始字符串，用于文本结果，lazyloading
+@property (nonatomic, readonly, copy) NSString *rawString;    // 原始字符串，用于文本结果，lazyloading
 @property (nonatomic, retain) id protobufParserData;    // 服务器返回的protobuf解析后的数据
 
 // state
