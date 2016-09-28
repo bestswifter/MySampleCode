@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+DeallocBlock.h"
 
 @interface ViewController ()
 
@@ -18,23 +19,35 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self memoryTest];
+    [self memoryTest];
+    NSLog(@"test");
 //    [self runloopTest];
 }
 
 #pragma --mark 内存占用测试
 - (void)memoryTest {
     for (int i = 0; i < 100000; ++i) {
+        //总结：test At: xcode8,ios 9.3.4
+        //1,当用CFRunLoopRun(),然后调用CFRunLoopStop，此方法是后果会输出current thread，thread dealloc，current thread，thread dealloc ...所以不会用内存问题
+        //2,当用 [runLoop run];,然后调用CFRunLoopStop,此方法会current thread，current thread，... 最后输出[NSThread start]: Thread creation failed with error 35.然后app卡住，然后app crash. 内存不会暴增。但是线程无法销毁
+        //3,当用 [runLoop runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];,然后调用CFRunLoopStop,此方法会。[ViewController performSelector:onThread:withObject:waitUntilDone:modes:]: target thread exited while waiting for the perform' crash。是因为 [runLoop runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]]; 无法阻塞线程，所以线程很快执行完run 方法。然后线程exit，导致奔溃（在一个退出的线程，当然这个时候线程没有释放，执行方法奔溃）
+        
         NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+        [thread runAtDealloc:^{
+            NSLog(@"thread dealloc");
+        }];
         [thread start];
         [self performSelector:@selector(stopThread) onThread:thread withObject:nil waitUntilDone:YES];
     }
+    NSLog(@"test over");
 }
 
 - (void)stopThread {
     CFRunLoopStop(CFRunLoopGetCurrent());
+//    [[NSRunLoop currentRunLoop] removePort:self.emptyPort forMode:NSDefaultRunLoopMode];
     NSThread *thread = [NSThread currentThread];
     [thread cancel];
 }
@@ -49,8 +62,9 @@
         [runLoop addPort:self.emptyPort forMode:NSDefaultRunLoopMode];
         // 下面这两种写法都不可取
 //        [runLoop run];
-//        [runLoop runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];
-        CFRunLoopRun();
+        [runLoop runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];
+//        CFRunLoopRun();
+        NSLog(@"run over");
     }
 }
 
