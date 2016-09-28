@@ -13,6 +13,7 @@
 		9BAA82B11D451A0E00E5B98A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA82AF1D451A0E00E5B98A /* Main.storyboard */; };
 		9BAA82B31D451A0E00E5B98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA82B21D451A0E00E5B98A /* Assets.xcassets */; };
 		9BAA82B61D451A0E00E5B98A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA82B41D451A0E00E5B98A /* LaunchScreen.storyboard */; };
+		E59118CB1D9B84FE00F25FF6 /* NSObject+DeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E59118CA1D9B84FE00F25FF6 /* NSObject+DeallocBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9BAA82B21D451A0E00E5B98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BAA82B51D451A0E00E5B98A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BAA82B71D451A0E00E5B98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59118C91D9B84FE00F25FF6 /* NSObject+DeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeallocBlock.h"; sourceTree = "<group>"; };
+		E59118CA1D9B84FE00F25FF6 /* NSObject+DeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeallocBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		9BAA82A51D451A0E00E5B98A /* RunloopAndThread */ = {
 			isa = PBXGroup;
 			children = (
+				E59118C91D9B84FE00F25FF6 /* NSObject+DeallocBlock.h */,
+				E59118CA1D9B84FE00F25FF6 /* NSObject+DeallocBlock.m */,
 				9BAA82A91D451A0E00E5B98A /* AppDelegate.h */,
 				9BAA82AA1D451A0E00E5B98A /* AppDelegate.m */,
 				9BAA82AC1D451A0E00E5B98A /* ViewController.h */,
@@ -110,7 +115,7 @@
 				TargetAttributes = {
 					9BAA82A21D451A0E00E5B98A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = U2HX3RFD94;
+						DevelopmentTeam = RN42P92PY7;
 					};
 				};
 			};
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59118CB1D9B84FE00F25FF6 /* NSObject+DeallocBlock.m in Sources */,
 				9BAA82AE1D451A0E00E5B98A /* ViewController.m in Sources */,
 				9BAA82AB1D451A0E00E5B98A /* AppDelegate.m in Sources */,
 				9BAA82A81D451A0E00E5B98A /* main.m in Sources */,
@@ -264,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN42P92PY7;
 				INFOPLIST_FILE = RunloopAndThread/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = baidu.RunloopAndThread;
@@ -275,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN42P92PY7;
 				INFOPLIST_FILE = RunloopAndThread/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = baidu.RunloopAndThread;
@@ -301,6 +309,7 @@
 				9BAA82BC1D451A0E00E5B98A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
