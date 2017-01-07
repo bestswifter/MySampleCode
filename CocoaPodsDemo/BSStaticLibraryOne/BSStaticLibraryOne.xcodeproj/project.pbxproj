@@ -10,6 +10,8 @@
 		9B0B718C1E20DD5A005D11BA /* BSStaticLibraryOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B718B1E20DD5A005D11BA /* BSStaticLibraryOne.m */; };
 		9B0B718D1E20DD5A005D11BA /* BSStaticLibraryOne.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B0B718A1E20DD5A005D11BA /* BSStaticLibraryOne.h */; };
 		9B0B71951E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B71941E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m */; };
+		9B0B71BC1E20E3A0005D11BA /* BSStaticLibraryOne.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0B718A1E20DD5A005D11BA /* BSStaticLibraryOne.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B0B71BD1E20E3A0005D11BA /* BSStaticLibraryOne+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0B71931E20DE7B005D11BA /* BSStaticLibraryOne+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +75,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9B0B71BB1E20E374005D11BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0B71BC1E20E3A0005D11BA /* BSStaticLibraryOne.h in Headers */,
+				9B0B71BD1E20E3A0005D11BA /* BSStaticLibraryOne+Extension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		9B0B71861E20DD5A005D11BA /* BSStaticLibraryOne */ = {
 			isa = PBXNativeTarget;
@@ -81,6 +95,7 @@
 				9B0B71831E20DD5A005D11BA /* Sources */,
 				9B0B71841E20DD5A005D11BA /* Frameworks */,
 				9B0B71851E20DD5A005D11BA /* CopyFiles */,
+				9B0B71BB1E20E374005D11BA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -261,6 +276,7 @@
 				9B0B71921E20DD5A005D11BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
