@@ -12,6 +12,9 @@
 		9B0B71951E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B71941E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m */; };
 		9B0B71BC1E20E3A0005D11BA /* BSStaticLibraryOne.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0B718A1E20DD5A005D11BA /* BSStaticLibraryOne.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B0B71BD1E20E3A0005D11BA /* BSStaticLibraryOne+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0B71931E20DE7B005D11BA /* BSStaticLibraryOne+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B53E8551E223564005F74C6 /* BSStaticLibraryTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */; };
+		9B53E8561E223564005F74C6 /* BSStaticLibraryTwo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */; };
+		9B53E85B1E224C62005F74C6 /* BSStaticLibraryTwo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B53E84F1E223564005F74C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				9B53E8561E223564005F74C6 /* BSStaticLibraryTwo.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +46,20 @@
 		9B0B718B1E20DD5A005D11BA /* BSStaticLibraryOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSStaticLibraryOne.m; sourceTree = "<group>"; };
 		9B0B71931E20DE7B005D11BA /* BSStaticLibraryOne+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BSStaticLibraryOne+Extension.h"; sourceTree = "<group>"; };
 		9B0B71941E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BSStaticLibraryOne+Extension.m"; sourceTree = "<group>"; };
+		9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBSStaticLibraryTwo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSStaticLibraryTwo.h; sourceTree = "<group>"; };
+		9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSStaticLibraryTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B0B71841E20DD5A005D11BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B53E84E1E223564005F74C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0B71891E20DD5A005D11BA /* BSStaticLibraryOne */,
+				9B53E8521E223564005F74C6 /* BSStaticLibraryTwo */,
 				9B0B71881E20DD5A005D11BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0B71871E20DD5A005D11BA /* libBSStaticLibraryOne.a */,
+				9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +98,15 @@
 			path = BSStaticLibraryOne;
 			sourceTree = "<group>";
 		};
+		9B53E8521E223564005F74C6 /* BSStaticLibraryTwo */ = {
+			isa = PBXGroup;
+			children = (
+				9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */,
+				9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */,
+			);
+			path = BSStaticLibraryTwo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -82,6 +116,14 @@
 			files = (
 				9B0B71BC1E20E3A0005D11BA /* BSStaticLibraryOne.h in Headers */,
 				9B0B71BD1E20E3A0005D11BA /* BSStaticLibraryOne+Extension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B53E85A1E224C5B005F74C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B53E85B1E224C62005F74C6 /* BSStaticLibraryTwo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +148,24 @@
 			productReference = 9B0B71871E20DD5A005D11BA /* libBSStaticLibraryOne.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		9B53E8501E223564005F74C6 /* BSStaticLibraryTwo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B53E8571E223564005F74C6 /* Build configuration list for PBXNativeTarget "BSStaticLibraryTwo" */;
+			buildPhases = (
+				9B53E84D1E223564005F74C6 /* Sources */,
+				9B53E84E1E223564005F74C6 /* Frameworks */,
+				9B53E84F1E223564005F74C6 /* CopyFiles */,
+				9B53E85A1E224C5B005F74C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSStaticLibraryTwo;
+			productName = BSStaticLibraryTwo;
+			productReference = 9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +176,10 @@
 				ORGANIZATIONNAME = bestswifter;
 				TargetAttributes = {
 					9B0B71861E20DD5A005D11BA = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					9B53E8501E223564005F74C6 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -134,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				9B0B71861E20DD5A005D11BA /* BSStaticLibraryOne */,
+				9B53E8501E223564005F74C6 /* BSStaticLibraryTwo */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +210,14 @@
 			files = (
 				9B0B718C1E20DD5A005D11BA /* BSStaticLibraryOne.m in Sources */,
 				9B0B71951E20DE7B005D11BA /* BSStaticLibraryOne+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B53E84D1E223564005F74C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B53E8551E223564005F74C6 /* BSStaticLibraryTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +332,24 @@
 			};
 			name = Release;
 		};
+		9B53E8581E223564005F74C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9B53E8591E223564005F74C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -279,6 +370,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9B53E8571E223564005F74C6 /* Build configuration list for PBXNativeTarget "BSStaticLibraryTwo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B53E8581E223564005F74C6 /* Debug */,
+				9B53E8591E223564005F74C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
