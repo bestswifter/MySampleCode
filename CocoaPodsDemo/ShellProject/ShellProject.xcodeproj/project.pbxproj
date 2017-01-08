@@ -275,6 +275,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$PROJECT_DIR/../BSStaticLibraryOne/Build/Products/Debug-iphonesimulator/LibOne",
 					"$(inherited)",
+					"$PROJECT_DIR/../BSStaticLibraryOne/Build/Products/Debug-iphonesimulator/LibTwo",
 				);
 				INFOPLIST_FILE = ShellProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -287,6 +288,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-l\"BSStaticLibraryOne\"",
+					"-l\"BSStaticLibraryTwo\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = baidu.ShellProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +302,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$PROJECT_DIR/../BSStaticLibraryOne/Build/Products/Debug-iphonesimulator/LibOne",
 					"$(inherited)",
+					"$PROJECT_DIR/../BSStaticLibraryOne/Build/Products/Debug-iphonesimulator/LibTwo",
 				);
 				INFOPLIST_FILE = ShellProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -311,6 +314,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-l\"BSStaticLibraryOne\"",
+					"-l\"BSStaticLibraryTwo\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = baidu.ShellProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +340,7 @@
 				9B0B71E61E2117A4005D11BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

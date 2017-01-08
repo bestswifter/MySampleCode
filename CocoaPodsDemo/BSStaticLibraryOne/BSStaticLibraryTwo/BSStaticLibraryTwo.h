@@ -10,4 +10,6 @@
 
 @interface BSStaticLibraryTwo : NSObject
 
+- (void)saySomething;
+
 @end

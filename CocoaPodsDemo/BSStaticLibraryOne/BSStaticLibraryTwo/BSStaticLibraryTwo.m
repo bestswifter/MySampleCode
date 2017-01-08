@@ -10,4 +10,8 @@
 
 @implementation BSStaticLibraryTwo
 
+- (void)saySomething {
+    NSLog(@"In Library: BSStaticLibraryTwo");
+}
+
 @end
