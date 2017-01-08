@@ -15,7 +15,26 @@
 		9B53E8551E223564005F74C6 /* BSStaticLibraryTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */; };
 		9B53E8561E223564005F74C6 /* BSStaticLibraryTwo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */; };
 		9B53E85B1E224C62005F74C6 /* BSStaticLibraryTwo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B53E8641E226EA4005F74C6 /* Pod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B53E8631E226EA4005F74C6 /* Pod.m */; };
+		9B53E8651E226EA4005F74C6 /* Pod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B53E8621E226EA4005F74C6 /* Pod.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B53E8691E226EAD005F74C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B0B717F1E20DD5A005D11BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B0B71861E20DD5A005D11BA;
+			remoteInfo = BSStaticLibraryOne;
+		};
+		9B53E86B1E226EAD005F74C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B0B717F1E20DD5A005D11BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B53E8501E223564005F74C6;
+			remoteInfo = BSStaticLibraryTwo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9B0B71851E20DD5A005D11BA /* CopyFiles */ = {
@@ -38,6 +57,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B53E85E1E226EA4005F74C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				9B53E8651E226EA4005F74C6 /* Pod.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +78,9 @@
 		9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBSStaticLibraryTwo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B53E8531E223564005F74C6 /* BSStaticLibraryTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSStaticLibraryTwo.h; sourceTree = "<group>"; };
 		9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSStaticLibraryTwo.m; sourceTree = "<group>"; };
+		9B53E8601E226EA4005F74C6 /* libPod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPod.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B53E8621E226EA4005F74C6 /* Pod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pod.h; sourceTree = "<group>"; };
+		9B53E8631E226EA4005F74C6 /* Pod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B53E85D1E226EA4005F74C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +113,7 @@
 			children = (
 				9B0B71891E20DD5A005D11BA /* BSStaticLibraryOne */,
 				9B53E8521E223564005F74C6 /* BSStaticLibraryTwo */,
+				9B53E8611E226EA4005F74C6 /* Pod */,
 				9B0B71881E20DD5A005D11BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +123,7 @@
 			children = (
 				9B0B71871E20DD5A005D11BA /* libBSStaticLibraryOne.a */,
 				9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */,
+				9B53E8601E226EA4005F74C6 /* libPod.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +146,15 @@
 				9B53E8541E223564005F74C6 /* BSStaticLibraryTwo.m */,
 			);
 			path = BSStaticLibraryTwo;
+			sourceTree = "<group>";
+		};
+		9B53E8611E226EA4005F74C6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9B53E8621E226EA4005F74C6 /* Pod.h */,
+				9B53E8631E226EA4005F74C6 /* Pod.m */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +216,25 @@
 			productReference = 9B53E8511E223564005F74C6 /* libBSStaticLibraryTwo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		9B53E85F1E226EA4005F74C6 /* Pod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B53E8661E226EA4005F74C6 /* Build configuration list for PBXNativeTarget "Pod" */;
+			buildPhases = (
+				9B53E85C1E226EA4005F74C6 /* Sources */,
+				9B53E85D1E226EA4005F74C6 /* Frameworks */,
+				9B53E85E1E226EA4005F74C6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B53E86A1E226EAD005F74C6 /* PBXTargetDependency */,
+				9B53E86C1E226EAD005F74C6 /* PBXTargetDependency */,
+			);
+			name = Pod;
+			productName = Pod;
+			productReference = 9B53E8601E226EA4005F74C6 /* libPod.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +249,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					9B53E8501E223564005F74C6 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					9B53E85F1E226EA4005F74C6 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -199,6 +272,7 @@
 			targets = (
 				9B0B71861E20DD5A005D11BA /* BSStaticLibraryOne */,
 				9B53E8501E223564005F74C6 /* BSStaticLibraryTwo */,
+				9B53E85F1E226EA4005F74C6 /* Pod */,
 			);
 		};
 /* End PBXProject section */
@@ -221,7 +295,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B53E85C1E226EA4005F74C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B53E8641E226EA4005F74C6 /* Pod.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B53E86A1E226EAD005F74C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B0B71861E20DD5A005D11BA /* BSStaticLibraryOne */;
+			targetProxy = 9B53E8691E226EAD005F74C6 /* PBXContainerItemProxy */;
+		};
+		9B53E86C1E226EAD005F74C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B53E8501E223564005F74C6 /* BSStaticLibraryTwo */;
+			targetProxy = 9B53E86B1E226EAD005F74C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9B0B718E1E20DD5A005D11BA /* Debug */ = {
@@ -352,6 +447,24 @@
 			};
 			name = Release;
 		};
+		9B53E8671E226EA4005F74C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9B53E8681E226EA4005F74C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -378,6 +491,14 @@
 			buildConfigurations = (
 				9B53E8581E223564005F74C6 /* Debug */,
 				9B53E8591E223564005F74C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B53E8661E226EA4005F74C6 /* Build configuration list for PBXNativeTarget "Pod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B53E8671E226EA4005F74C6 /* Debug */,
+				9B53E8681E226EA4005F74C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
