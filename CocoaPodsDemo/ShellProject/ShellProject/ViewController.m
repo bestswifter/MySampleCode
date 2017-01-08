@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "BSStaticLibraryOne.h"
-#import "BSStaticLibraryOne+Extension.h"
-#import "BSStaticLibraryTwo.h"
+#import <BSStaticLibraryOne.h>
+#import <BSStaticLibraryOne+Extension.h>
+#import <BSStaticLibraryTwo.h>
 
 @interface ViewController ()
 

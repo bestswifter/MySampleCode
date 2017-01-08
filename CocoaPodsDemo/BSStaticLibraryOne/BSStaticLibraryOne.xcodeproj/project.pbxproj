@@ -452,6 +452,7 @@
 		9B53E8671E226EA4005F74C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -495,6 +496,7 @@
 				9B53E8591E223564005F74C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B53E8661E226EA4005F74C6 /* Build configuration list for PBXNativeTarget "Pod" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				9B53E8681E226EA4005F74C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

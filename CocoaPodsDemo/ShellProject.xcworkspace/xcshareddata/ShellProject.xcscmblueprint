@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "054FA612D81390BCA914FF3E911AFB6ED941DB7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "054FA612D81390BCA914FF3E911AFB6ED941DB7C" : 9223372036854775807,
+    "C71A612E55CCF042C9D0404A97F793518FAC0059" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "374E162E-2A30-4B89-BEBA-6B8FDE39D0C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "054FA612D81390BCA914FF3E911AFB6ED941DB7C" : "SampleCode\/",
+    "C71A612E55CCF042C9D0404A97F793518FAC0059" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShellProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CocoaPodsDemo\/ShellProject.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/649395594\/MySampleCode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "054FA612D81390BCA914FF3E911AFB6ED941DB7C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/649395594\/panDoctor-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C71A612E55CCF042C9D0404A97F793518FAC0059"
+    }
+  ]
+}
