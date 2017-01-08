@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BSStaticLibraryOne.h"
+#import "BSStaticLibraryOne+Extension.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[[BSStaticLibraryOne alloc] init] saySomething];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
