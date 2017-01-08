@@ -13,6 +13,7 @@
 		9B0B71DB1E2117A4005D11BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B71D91E2117A4005D11BA /* Main.storyboard */; };
 		9B0B71DD1E2117A4005D11BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B71DC1E2117A4005D11BA /* Assets.xcassets */; };
 		9B0B71E01E2117A4005D11BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B71DE1E2117A4005D11BA /* LaunchScreen.storyboard */; };
+		9B53E86F1E227340005F74C6 /* libPod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53E86E1E227340005F74C6 /* libPod.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B0B71DC1E2117A4005D11BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B0B71DF1E2117A4005D11BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B0B71E11E2117A4005D11BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B53E86E1E227340005F74C6 /* libPod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPod.a; path = "../BSStaticLibraryOne/Build/Products/Debug-iphonesimulator/libPod.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B53E86F1E227340005F74C6 /* libPod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				9B0B71CF1E2117A4005D11BA /* ShellProject */,
 				9B0B71CE1E2117A4005D11BA /* Products */,
+				9B53E86D1E227340005F74C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				9B0B71D11E2117A4005D11BA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B53E86D1E227340005F74C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B53E86E1E227340005F74C6 /* libPod.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
