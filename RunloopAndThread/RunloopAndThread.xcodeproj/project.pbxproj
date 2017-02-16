@@ -273,7 +273,7 @@
 				DEVELOPMENT_TEAM = RN42P92PY7;
 				INFOPLIST_FILE = RunloopAndThread/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.RunloopAndThread;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.RunloopAndThread;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,7 +285,7 @@
 				DEVELOPMENT_TEAM = RN42P92PY7;
 				INFOPLIST_FILE = RunloopAndThread/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.RunloopAndThread;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.RunloopAndThread;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

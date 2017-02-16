@@ -302,7 +302,7 @@
 					"-l\"BSStaticLibraryOne\"",
 					"-l\"BSStaticLibraryTwo\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.ShellProject;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.ShellProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -328,7 +328,7 @@
 					"-l\"BSStaticLibraryOne\"",
 					"-l\"BSStaticLibraryTwo\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.ShellProject;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.ShellProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

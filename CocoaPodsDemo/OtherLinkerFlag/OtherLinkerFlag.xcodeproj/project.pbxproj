@@ -286,7 +286,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OtherLinkerFlag",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.OtherLinkerFlag;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.OtherLinkerFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -301,7 +301,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OtherLinkerFlag",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baidu.OtherLinkerFlag;
+				PRODUCT_BUNDLE_IDENTIFIER = bestswifter.OtherLinkerFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

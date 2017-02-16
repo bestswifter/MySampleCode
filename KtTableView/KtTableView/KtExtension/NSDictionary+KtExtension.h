@@ -2,7 +2,7 @@
 //  NSDictionary+KtExtension.h
 //  KtTableView
 //
-//  Created by baidu on 16/5/15.
+//  Created by bestswifter on 16/5/15.
 //  Copyright © 2016年 zxy. All rights reserved.
 //
 

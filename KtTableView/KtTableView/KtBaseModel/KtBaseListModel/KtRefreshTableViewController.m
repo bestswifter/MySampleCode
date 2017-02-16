@@ -2,7 +2,7 @@
 //  KtRefreshTableViewController.m
 //  KtTableView
 //
-//  Created by baidu on 16/5/20.
+//  Created by bestswifter on 16/5/20.
 //  Copyright © 2016年 zxy. All rights reserved.
 //
 
