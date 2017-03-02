@@ -12,7 +12,12 @@
 
 @interface KtBaseTableViewCell : UITableViewCell
 
-@property (nonatomic, retain) id object;
+/**
+ *  子类通过该方法传入Item
+ *
+ *  @param object 用于展示的数据源
+ */
+- (void)setObject:(KtTableViewBaseItem *)object;
 
 + (CGFloat)tableView:(UITableView*)tableView rowHeightForObject:(KtTableViewBaseItem *)object;
 
