@@ -9,16 +9,16 @@
 import UIKit
 
 class CustomTableCell: UITableViewCell {
-    let imgView = UIImageView(frame: CGRectMake(10, 10, 180, 180))
-    let label = UILabel(frame: CGRectMake(220, 90, 150, 20))
+    let imgView = UIImageView(frame: CGRect(x: 10, y: 10, width: 180, height: 180))
+    let label = UILabel(frame: CGRect(x: 220, y: 90, width: 150, height: 20))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        imgView.layer.shadowColor = UIColor.blackColor().CGColor
+        imgView.layer.shadowColor = UIColor.black.cgColor
         imgView.layer.shadowOpacity = 1
         imgView.layer.shadowRadius = 2
-        imgView.layer.shadowOffset = CGSizeMake(1, 1)
+        imgView.layer.shadowOffset = CGSize(width: 1, height: 1)
         
         label.layer.shouldRasterize = true
         
