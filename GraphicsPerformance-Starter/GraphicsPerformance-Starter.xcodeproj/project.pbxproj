@@ -207,16 +207,16 @@
 				TargetAttributes = {
 					9BEA051B1C50EFAC0075E954 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = U2HX3RFD94;
+						DevelopmentTeam = FQL8675Q6W;
 					};
 					9BEA05311C50EFAC0075E954 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = U2HX3RFD94;
+						DevelopmentTeam = FQL8675Q6W;
 						TestTargetID = 9BEA051B1C50EFAC0075E954;
 					};
 					9BEA053C1C50EFAC0075E954 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = U2HX3RFD94;
+						DevelopmentTeam = FQL8675Q6W;
 						TestTargetID = 9BEA051B1C50EFAC0075E954;
 					};
 				};
@@ -416,10 +416,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-Starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -427,10 +429,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-Starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -438,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-StarterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-StarterTests";
@@ -450,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-StarterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-StarterTests";
@@ -461,6 +467,7 @@
 		9BEA054D1C50EFAC0075E954 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-StarterUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-StarterUITests";
@@ -473,6 +480,7 @@
 		9BEA054E1C50EFAC0075E954 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = FQL8675Q6W;
 				INFOPLIST_FILE = "GraphicsPerformance-StarterUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NEU.GraphicsPerformance-StarterUITests";
