@@ -10,10 +10,10 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    let imgView1 = UIImageView(frame: CGRectMake(5, 10, 20, 21))
-    let imgView2 = UIImageView(frame: CGRectMake(55, 10, 20, 21))
-    let view = UIView(frame: CGRectMake(150,10,40,21))
-    let label = UILabel(frame: CGRectMake(250,10,80,21))
+    let imgView1 = UIImageView(frame: CGRect(x: 5, y: 10, width: 20, height: 21))
+    let imgView2 = UIImageView(frame: CGRect(x: 55, y: 10, width: 20, height: 21))
+    let view = UIView(frame: CGRect(x: 150, y: 10, width: 40, height: 21))
+    let label = UILabel(frame: CGRect(x: 250, y: 10, width: 80, height: 21))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,7 +21,7 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(imgView1)
         self.contentView.addSubview(imgView2)
 
-        view.backgroundColor = UIColor.brownColor()
+        view.backgroundColor = UIColor.brown
         view.layer.cornerRadius = 5
         
         self.contentView.addSubview(view)
@@ -30,7 +30,7 @@ class CustomTableViewCell: UITableViewCell {
 //        label.kt_addCorner(radius: 8)
         label.layer.cornerRadius = 5
         label.text = "123"
-        label.backgroundColor = UIColor.brownColor()
+        label.backgroundColor = UIColor.brown
         self.contentView.addSubview(label)
     }
 
@@ -43,18 +43,18 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setupContent(imgName imgName: String) {
+    func setupContent(imgName: String) {
         imgView1.image = UIImage(named: imgName)
         imgView2.image = UIImage(named: imgName)
         
         // 下面两行取消注释后试试
-//        imgView1.kt_addCorner(radius: 5)
-//        imgView2.kt_addCorner(radius: 5)
+//        imgView1.kt_imageViewAddCorner(radius: 5)
+//        imgView2.kt_imageViewAddCorner(radius: 5)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 
