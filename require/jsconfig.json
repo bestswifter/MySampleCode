@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // "target": "es6",
+    // "module": "commonjs",
+    "baseUrl": "./",
+    // "paths": {
+    //   "*": [
+    //     "*"
+    //   ]
+    // }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
